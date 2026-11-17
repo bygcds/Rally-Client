@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rally — Cliente no oficial de HaxBall para Windows</title>
+<meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows: FPS desbloqueados, tu propia imagen, uniformes, replays automáticos y actualizaciones con un clic.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="Rally — Cliente no oficial de HaxBall">
+<meta property="og:description" content="FPS desbloqueados, uniformes, replays automáticos y actualizaciones con un clic. Para Windows.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/icon-128.png">
+<link rel="preload" href="assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Rally"><img src="assets/logo.png" alt="" width="30" height="30">Rally</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#funciones" data-i18n="nav.features">Funciones</a>
+      <a href="#capturas" data-i18n="nav.screens">Capturas</a>
+      <a href="#novedades" data-i18n="nav.news">Novedades</a>
+      <a href="#faq" data-i18n="nav.faq">Preguntas</a>
+      <a href="#descargar" data-i18n="nav.download">Descargar</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Cliente no oficial · Windows</span>
+      <h1 data-i18n="hero.title">HaxBall para jugar en serio</h1>
+      <p class="lead" data-i18n="hero.lead">Más fluidez, tu propia imagen, uniformes, replays automáticos y actualizaciones con un clic.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+          <span data-i18n="hero.cta">Descargar para Windows</span>
+        </a>
+        <a class="btn" href="#novedades" data-i18n="hero.news">Ver novedades</a>
+      </div>
+      <div class="hero-meta">
+        <span hidden><strong data-version></strong></span>
+        <span data-i18n="hero.meta1">Windows 10 y 11</span>
+        <span data-i18n="hero.meta2">Sin permisos de administrador</span>
+      </div>
+    </div>
+
+    <figure class="shot">
+      <div class="shot-bar"><span data-i18n="shot.rooms">Lista de salas</span></div>
+      <div class="shot-body">
+        <img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" width="1600" height="1000" fetchpriority="high">
+        <div class="ph">assets/shots/salas.png</div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================= FUNCIONES ======================= -->
+<section id="funciones">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="features.title">Qué trae</h2>
+    <p class="sec-lead" data-i18n="features.lead">Todo se configura desde el engranaje de la barra superior del cliente.</p>
+
+    <div class="grid">
+      <article class="card"><span class="num">01</span><h3 data-i18n="f1.t">FPS desbloqueados</h3><p data-i18n-html="f1.d">FPS desbloqueados con un medidor integrado. Escribe <code>/fps</code> para ver los tuyos.</p></article>
+      <article class="card"><span class="num">02</span><h3 data-i18n="f2.t">Color del balón</h3><p data-i18n="f2.d">Elige el color que mejor veas. Solo lo ves tú.</p></article>
+      <article class="card"><span class="num">03</span><h3 data-i18n="f3.t">Resolución estirada</h3><p data-i18n="f3.d">4:3, 5:4 o la que escribas, como en los shooters competitivos.</p></article>
+      <article class="card"><span class="num">04</span><h3 data-i18n="f4.t">Uniformes</h3><p data-i18n="f4.d">Personalizados, con vista previa, biblioteca y asignación por equipo. Más selecciones y clubes de ejemplo con un clic. Solo los ves tú.</p></article>
+      <article class="card"><span class="num">05</span><h3 data-i18n-html="f5.t"><span>/gif</span></h3><p data-i18n="f5.d">Avatares animados en tus partidas.</p></article>
+      <article class="card"><span class="num">06</span><h3 data-i18n="f6.t">Replays automáticos</h3><p data-i18n-html="f6.d">Se graban las partidas en las que juegas. Los archivos <code>.hbr2</code> se abren con doble clic.</p></article>
+      <article class="card"><span class="num">07</span><h3 data-i18n="f7.t">Comandos locales</h3><p data-i18n-html="f7.d"><code>/fps</code> para ver tus FPS y <code>!bb</code> para salir de una sala al instante.</p></article>
+      <article class="card"><span class="num">08</span><h3 data-i18n="f8.t">Interfaz oscura</h3><p data-i18n="f8.d">Lista de salas, sala y ajustes con un mismo diseño, claro de leer y ligero.</p></article>
+      <article class="card"><span class="num">09</span><h3 data-i18n="f9.t">Actualizaciones con un clic</h3><p data-i18n="f9.d">Rally avisa de cada versión nueva, se descarga e instala sola y te enseña lo que cambió.</p></article>
+    </div>
+
+    <div class="chips">
+      <span class="chip" data-i18n="chip1">Discord Rich Presence (opcional)</span>
+      <span class="chip" data-i18n="chip2">Español · English · Português</span>
+      <span class="chip" data-i18n="chip3">Copia de seguridad de tus ajustes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CAPTURAS ======================= -->
+<section class="alt" id="capturas">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="screens.title">Capturas</h2>
+    <p class="sec-lead" data-i18n="screens.lead">Así se ve el cliente por dentro.</p>
+
+    <div class="gallery">
+      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.rooms">Lista de salas</span></div>
+        <div class="shot-body"><img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/salas.png</div></div></figure>
+      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.room">Dentro de una sala</span></div>
+        <div class="shot-body"><img src="assets/shots/sala.png" alt="" data-i18n-alt="shot.room.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/sala.png</div></div></figure>
+      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.image">Ajustes → Imagen</span></div>
+        <div class="shot-body"><img src="assets/shots/imagen.png" alt="" data-i18n-alt="shot.image.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/imagen.png</div></div></figure>
+      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.kits">Ajustes → Uniformes</span></div>
+        <div class="shot-body"><img src="assets/shots/uniformes.png" alt="" data-i18n-alt="shot.kits.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/uniformes.png</div></div></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= NOVEDADES ======================= -->
+<section id="novedades">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="news.title">Novedades</h2>
+    <p class="sec-lead" data-i18n="news.lead">Lo mismo que Rally te muestra al abrir tras actualizar.</p>
+    <div class="timeline" id="timeline" aria-live="polite"><p class="muted" data-i18n="news.loading">Cargando…</p></div>
+  </div>
+</section>
+
+<!-- ======================= DESCARGAR ======================= -->
+<section class="alt" id="descargar">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="dl.title">Descargar</h2>
+    <p class="sec-lead" data-i18n="dl.lead">Para Windows 10 y 11, 64 o 32 bits. No hace falta ser administrador.</p>
+
+    <div class="dl-panel">
+      <div class="dl-main">
+        <a class="btn btn-primary" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+          <span data-i18n="dl.btn">Descargar Rally</span>
+        </a>
+        <p class="dl-file" data-file></p>
+        <p class="dl-note"><span data-i18n="dl.other">¿Otra versión?</span> <a href="https://github.com/bygcds/Rally-Client/releases" data-i18n="dl.all">Ver todas las Releases</a></p>
+      </div>
+
+      <ol class="steps">
+        <li class="step"><div><h3 data-i18n="dl.s1.t">Descarga el instalador</h3><p data-i18n-html="dl.s1.d">Es el archivo <code>Rally-Setup-&lt;versión&gt;.exe</code>.</p></div></li>
+        <li class="step"><div><h3 data-i18n="dl.s2.t">Ejecútalo</h3><p data-i18n="dl.s2.d">Elige la carpeta si quieres y termina la instalación. Se abre solo al acabar.</p></div></li>
+        <li class="step"><div><h3 data-i18n="dl.s3.t">Elige idioma y listo</h3><p data-i18n="dl.s3.d">La guía de bienvenida te enseña lo básico. Puedes releerla en Ajustes → Varios.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="notes">
+      <div class="note"><h3 data-i18n="n1.t">Aviso de Windows</h3><p data-i18n="n1.d">Como el instalador aún no está firmado digitalmente, Windows puede mostrar «Windows protegió su PC». Pulsa Más información → Ejecutar de todas formas.</p></div>
+      <div class="note"><h3 data-i18n="n2.t">Descarga solo el .exe</h3><p data-i18n="n2.d">En Releases verás otros archivos (.blockmap, latest.yml, latest.json): los usa Rally para actualizarse. Tú solo necesitas el .exe, y solo desde este repositorio.</p></div>
+      <div class="note info"><h3 data-i18n="n3.t">No afiliado a HaxBall</h3><p data-i18n="n3.d">Rally es un proyecto independiente. No está afiliado ni respaldado por HaxBall ni por su autor.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq">
+  <div class="wrap">
+    <h2 class="sec-title" data-i18n="faq.title">Preguntas frecuentes</h2>
+    <div class="faq">
+      <details><summary data-i18n="q1.q">¿Dónde se guardan mis replays y mapas?</summary><div class="ans" data-i18n-html="q1.a">En <code>%APPDATA%\RallyClient\Replays</code> y <code>%APPDATA%\RallyClient\Stadiums</code>. Ajustes → Replays tiene un botón para abrir la carpeta.</div></details>
+      <details><summary data-i18n="q2.q">¿Qué datos envía Rally?</summary><div class="ans" data-i18n="q2.a">Rally no tiene servidores propios. Solo se conecta a haxball.com (el juego) y a GitHub (para comprobar y bajar actualizaciones). Tus ajustes se guardan solo en tu PC.</div></details>
+      <details><summary data-i18n="q3.q">¿Qué pasa cuando HaxBall se actualiza?</summary><div class="ans" data-i18n="q3.a">Rally modifica el juego en memoria al abrirlo. Si HaxBall cambia su código, esas funciones se desactivan solas (el juego sigue funcionando con normalidad) hasta que salga una actualización de Rally.</div></details>
+      <details><summary data-i18n="q4.q">¿Tengo que actualizar siempre?</summary><div class="ans" data-i18n="q4.a">Cada versión tiene un plazo de unos días; pasado el plazo hay que actualizar para seguir jugando. Tus ajustes y tus replays se conservan.</div></details>
+      <details><summary data-i18n="q5.q">¿Hay versión para Linux o Mac?</summary><div class="ans" data-i18n="q5.a">Por ahora solo Windows. Linux y, más adelante, Mac están en los planes.</div></details>
+      <details><summary data-i18n="q6.q">Quiero reportar un problema o proponer algo</summary><div class="ans" data-i18n-html="q6.a">Abre un <a href="https://github.com/bygcds/Rally-Client/issues">issue</a> con tu versión de Rally (Ajustes → Varios → Acerca de) y qué estabas haciendo.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top" aria-label="Rally"><img src="assets/logo.png" alt="" width="30" height="30">Rally</a>
+      <nav class="foot-links" aria-label="GitHub">
+        <a href="https://github.com/bygcds/Rally-Client/releases/latest" data-i18n="foot.rel">Releases</a>
+        <a href="https://github.com/bygcds/Rally-Client/issues" data-i18n="foot.issues">Reportar un problema</a>
+        <a href="https://github.com/bygcds/Rally-Client" data-i18n="foot.repo">Repositorio</a>
+      </nav>
+    </div>
+    <p class="disclaimer" data-i18n="foot.disc">Rally no está afiliado ni respaldado por HaxBall ni por su autor. HaxBall es de sus respectivos dueños. Rally carga el juego oficial desde haxball.com y no incluye ni redistribuye su código.</p>
+    <p>© bygcds. <span data-i18n="foot.rights">Todos los derechos reservados.</span></p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

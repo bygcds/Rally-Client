@@ -1,0 +1,88 @@
+{
+  "versions": [
+    {
+      "version": "0.1.1",
+      "title": {
+        "es": "Uniformes de ejemplo",
+        "en": "Example kits",
+        "pt": "Uniformes de exemplo"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Uniformes de ejemplo: selecciones y clubes (solo colores) que añades con un clic en Ajustes → Uniformes.",
+            "en": "Example kits: national teams and clubs (colors only) that you add with one click in Settings → Kits.",
+            "pt": "Uniformes de exemplo: seleções e clubes (só cores) que você adiciona com um clique em Configurações → Uniformes."
+          }
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "title": {
+        "es": "Primera versión pública",
+        "en": "First public release",
+        "pt": "Primeira versão pública"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Color del balón personalizable (Ajustes → Imagen). Solo lo ves tú.",
+            "en": "Customizable ball color (Settings → Image). Only you see it.",
+            "pt": "Cor da bola personalizável (Configurações → Imagem). Só você vê."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Resolución estirada: elige 4:3 u otra, o escribe la tuya (Ajustes → Imagen).",
+            "en": "Stretched resolution: pick 4:3 or another, or type your own (Settings → Image).",
+            "pt": "Resolução esticada: escolha 4:3 ou outra, ou digite a sua (Configurações → Imagem)."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Uniformes personalizados y el comando /gif para avatares animados.",
+            "en": "Custom kits and the /gif command for animated avatars.",
+            "pt": "Uniformes personalizados e o comando /gif para avatares animados."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Grabación automática de partidas; los archivos .hbr2 se abren con doble clic.",
+            "en": "Automatic match recording; .hbr2 files open with a double click.",
+            "pt": "Gravação automática de partidas; arquivos .hbr2 abrem com duplo clique."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "FPS desbloqueados con medidor integrado.",
+            "en": "Unlocked FPS with a built-in meter.",
+            "pt": "FPS desbloqueado com medidor integrado."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Actualizaciones automáticas: Rally se descarga e instala solo con un clic, con plazo para actualizar y esta ventana de novedades.",
+            "en": "Automatic updates: Rally downloads and installs itself with one click, with a grace period and this what-is-new window.",
+            "pt": "Atualizações automáticas: o Rally baixa e instala sozinho com um clique, com prazo para atualizar e esta janela de novidades."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Guía de bienvenida la primera vez que abres Rally (se relee en Ajustes → Varios).",
+            "en": "Welcome guide the first time you open Rally (reread it in Settings → Misc).",
+            "pt": "Guia de boas-vindas na primeira vez que você abre o Rally (releia em Configurações → Diversos)."
+          }
+        }
+      ]
+    }
+  ]
+}
