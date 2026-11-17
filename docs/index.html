@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rally — Cliente no oficial de HaxBall para Windows</title>
+<title>Rally · Cliente no oficial de HaxBall para Windows</title>
 <meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows: FPS desbloqueados, tu propia imagen, uniformes, replays automáticos y actualizaciones con un clic.">
 <meta name="theme-color" content="#0a0a0a">
-<meta property="og:title" content="Rally — Cliente no oficial de HaxBall">
+<meta property="og:title" content="Rally · Cliente no oficial de HaxBall">
 <meta property="og:description" content="FPS desbloqueados, uniformes, replays automáticos y actualizaciones con un clic. Para Windows.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="assets/icon-128.png">
-<link rel="preload" href="assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/chakra-petch-700-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,7 +38,6 @@
 
 <main id="main">
 
-<!-- ======================= HERO ======================= -->
 <section class="hero" id="top">
   <div class="wrap">
     <div>
@@ -59,47 +58,37 @@
       </div>
     </div>
 
-    <figure class="shot">
-      <div class="shot-bar"><span data-i18n="shot.rooms">Lista de salas</span></div>
-      <div class="shot-body">
-        <img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" width="1600" height="1000" fetchpriority="high">
-        <div class="ph">assets/shots/salas.png</div>
-      </div>
-    </figure>
+    <figure class="shot" id="hero-shot"><img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" data-fallback="assets/shots/uniformes.png" data-fallback-alt="shot.kits.alt" width="1600" height="1000" fetchpriority="high"></figure>
   </div>
 </section>
 
-<!-- ======================= FUNCIONES ======================= -->
 <section id="funciones">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="features.title">Qué trae</h2>
     <p class="sec-lead" data-i18n="features.lead">Todo se configura desde el engranaje de la barra superior del cliente.</p>
 
     <div class="grid">
-      <article class="card"><span class="num">01</span><h3 data-i18n="f1.t">FPS desbloqueados</h3><p data-i18n-html="f1.d">FPS desbloqueados con un medidor integrado. Escribe <code>/fps</code> para ver los tuyos.</p><a class="more" href="#d-cmds" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">02</span><h3 data-i18n="f2.t">Color del balón</h3><p data-i18n="f2.d">Elige el color que mejor veas. Solo lo ves tú.</p></article>
-      <article class="card"><span class="num">03</span><h3 data-i18n="f3.t">Resolución estirada</h3><p data-i18n="f3.d">4:3, 5:4 o la que escribas, como en los shooters competitivos.</p></article>
-      <article class="card"><span class="num">04</span><h3 data-i18n="f4.t">Uniformes</h3><p data-i18n="f4.d">Personalizados, con vista previa, biblioteca y asignación por equipo. Más selecciones y clubes de ejemplo con un clic. Solo los ves tú.</p></article>
-      <article class="card"><span class="num">05</span><h3 data-i18n-html="f5.t"><span>/gif</span></h3><p data-i18n="f5.d">Avatares animados en tus partidas.</p><a class="more" href="#d-cmds" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">06</span><h3 data-i18n="f6.t">Replays automáticos</h3><p data-i18n-html="f6.d">Se graban las partidas en las que juegas. Los archivos <code>.hbr2</code> se abren con doble clic en Rally.</p><a class="more" href="#d-replays" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">07</span><h3 data-i18n="f7.t">Estadísticas</h3><p data-i18n="f7.d">Tus goles, asistencias y horas jugadas, contados solos en tus partidas.</p><a class="more" href="#d-stats" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">08</span><h3 data-i18n="f8.t">Última sala y favoritos</h3><p data-i18n="f8.d">Vuelve a tu última sala en un clic, marca favoritas y filtra la lista.</p><a class="more" href="#d-rooms" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">09</span><h3 data-i18n="f9.t">Discord Rich Presence</h3><p data-i18n="f9.d">Tu perfil muestra en qué sala juegas, el marcador y un botón para unirse. Cada dato se apaga por separado.</p><a class="more" href="#d-discord" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">10</span><h3 data-i18n="f10.t">Identidad y respaldo</h3><p data-i18n="f10.d">Copia tu identidad de HaxBall y guarda un respaldo de tu nick, teclas y ajustes.</p><a class="more" href="#d-account" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><span class="num">11</span><h3 data-i18n="f11.t">Interfaz oscura</h3><p data-i18n="f11.d">Lista de salas, sala y ajustes con un mismo diseño, claro de leer y ligero.</p></article>
-      <article class="card"><span class="num">12</span><h3 data-i18n="f12.t">Actualizaciones con un clic</h3><p data-i18n="f12.d">Rally avisa de cada versión nueva, se descarga e instala sola y te enseña lo que cambió.</p><a class="more" href="#novedades" data-i18n="more2">Ver novedades →</a></article>
+      <article class="card"><h3 data-i18n="f1.t">FPS desbloqueados</h3><p data-i18n-html="f1.d">FPS desbloqueados con un medidor integrado. Escribe <code>/fps</code> para ver los tuyos.</p><a class="more" href="#d-cmds" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f2.t">Color del balón</h3><p data-i18n="f2.d">Elige el color que mejor veas. Solo lo ves tú.</p></article>
+      <article class="card"><h3 data-i18n="f3.t">Resolución estirada</h3><p data-i18n="f3.d">4:3, 5:4 o la que escribas, como en los shooters competitivos.</p></article>
+      <article class="card"><h3 data-i18n="f4.t">Uniformes</h3><p data-i18n="f4.d">Personalizados, con vista previa, biblioteca y asignación por equipo. Más selecciones y clubes de ejemplo con un clic. Solo los ves tú.</p></article>
+      <article class="card"><h3 data-i18n-html="f5.t"><span>/gif</span></h3><p data-i18n="f5.d">Avatares animados en tus partidas.</p><a class="more" href="#d-cmds" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f6.t">Replays automáticos</h3><p data-i18n-html="f6.d">Se graban las partidas en las que juegas. Los archivos <code>.hbr2</code> se abren con doble clic en Rally.</p><a class="more" href="#d-replays" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f7.t">Estadísticas</h3><p data-i18n="f7.d">Tus goles, asistencias y horas jugadas, contados solos en tus partidas.</p><a class="more" href="#d-stats" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f8.t">Última sala y favoritos</h3><p data-i18n="f8.d">Vuelve a tu última sala en un clic, marca favoritas y filtra la lista.</p><a class="more" href="#d-rooms" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f9.t">Discord Rich Presence</h3><p data-i18n="f9.d">Tu perfil muestra en qué sala juegas, el marcador y un botón para unirse. Cada dato se apaga por separado.</p><a class="more" href="#d-discord" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f10.t">Identidad y respaldo</h3><p data-i18n="f10.d">Copia tu identidad de HaxBall y guarda un respaldo de tu nick, teclas y ajustes.</p><a class="more" href="#d-account" data-i18n="more">Ver detalle →</a></article>
+      <article class="card"><h3 data-i18n="f11.t">Interfaz oscura</h3><p data-i18n="f11.d">Lista de salas, sala y ajustes con un mismo diseño, claro de leer y ligero.</p></article>
+      <article class="card"><h3 data-i18n="f12.t">Actualizaciones con un clic</h3><p data-i18n="f12.d">Rally avisa de cada versión nueva, se descarga e instala sola y te enseña lo que cambió.</p><a class="more" href="#novedades" data-i18n="more2">Ver novedades →</a></article>
     </div>
 
-    <div class="chips">
-      <span class="chip" data-i18n="chip1">Español · English · Português</span>
-      <span class="chip" data-i18n="chip2">Panel translúcido</span>
-      <span class="chip" data-i18n="chip3">Opacidad y tamaño de letra del chat</span>
-      <span class="chip" data-i18n="chip4">Medidor de ping, jitter y pérdida</span>
-    </div>
+    <p class="also"><span data-i18n="chip1">Español · English · Português</span>
+      <span data-i18n="chip2">Panel translúcido</span>
+      <span data-i18n="chip3">Opacidad y tamaño de letra del chat</span>
+      <span data-i18n="chip4">Medidor de ping, jitter y pérdida</span></p>
   </div>
 </section>
 
-<!-- ======================= DETALLES ======================= -->
 <section class="alt" id="detalles">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="details.title">Con detalle</h2>
@@ -228,26 +217,22 @@
   </div>
 </section>
 
-<!-- ======================= CAPTURAS ======================= -->
 <section id="capturas">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="screens.title">Capturas</h2>
     <p class="sec-lead" data-i18n="screens.lead">Así se ve el cliente por dentro.</p>
 
     <div class="gallery">
-      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.rooms">Lista de salas</span></div>
-        <div class="shot-body"><img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/salas.png</div></div></figure>
-      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.room">Dentro de una sala</span></div>
-        <div class="shot-body"><img src="assets/shots/sala.png" alt="" data-i18n-alt="shot.room.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/sala.png</div></div></figure>
-      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.image">Ajustes → Imagen</span></div>
-        <div class="shot-body"><img src="assets/shots/imagen.png" alt="" data-i18n-alt="shot.image.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/imagen.png</div></div></figure>
-      <figure class="shot"><div class="shot-bar"><span data-i18n="shot.kits">Ajustes → Uniformes</span></div>
-        <div class="shot-body"><img src="assets/shots/uniformes.png" alt="" data-i18n-alt="shot.kits.alt" width="1600" height="1000" loading="lazy"><div class="ph">assets/shots/uniformes.png</div></div></figure>
+      <figure class="shot"><img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" width="1600" height="1000" loading="lazy"><figcaption data-i18n="shot.rooms">Lista de salas</figcaption></figure>
+      <figure class="shot"><img src="assets/shots/sala.png" alt="" data-i18n-alt="shot.room.alt" width="1600" height="1000" loading="lazy"><figcaption data-i18n="shot.room">Dentro de una sala</figcaption></figure>
+      <figure class="shot"><img src="assets/shots/imagen.png" alt="" data-i18n-alt="shot.image.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.image">Ajustes → Imagen</figcaption></figure>
+      <figure class="shot"><img src="assets/shots/uniformes.png" alt="" data-i18n-alt="shot.kits.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.kits">Ajustes → Uniformes</figcaption></figure>
+      <figure class="shot"><img src="assets/shots/replays.png" alt="" data-i18n-alt="shot.replays.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.replays">Ajustes → Replays</figcaption></figure>
+      <figure class="shot"><img src="assets/shots/rendimiento.png" alt="" data-i18n-alt="shot.perf.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.perf">Ajustes → Rendimiento</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ======================= NOVEDADES ======================= -->
 <section class="alt" id="novedades">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="news.title">Novedades</h2>
@@ -256,7 +241,6 @@
   </div>
 </section>
 
-<!-- ======================= DESCARGAR ======================= -->
 <section id="descargar">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="dl.title">Descargar</h2>
@@ -287,7 +271,6 @@
   </div>
 </section>
 
-<!-- ======================= FAQ ======================= -->
 <section class="alt" id="faq">
   <div class="wrap">
     <h2 class="sec-title" data-i18n="faq.title">Preguntas frecuentes</h2>

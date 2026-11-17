@@ -1,23 +1,9 @@
-/**
- * app.js — página de Rally
- * -----------------------------------------------------------------------
- *  1. Idioma (es/en/pt). El español vive en el HTML; aquí solo van en y pt.
- *  2. Descarga: pregunta a GitHub cuál es la última Release y apunta el
- *     botón al .exe. Si falla, el botón sigue llevando a Releases/latest.
- *  3. Novedades: pinta changelog.json (el mismo que usa el cliente).
- *
- * Los textos de changelog.json se insertan con textContent (nunca HTML).
- * Las traducciones de este archivo son nuestras (data-i18n-html es seguro).
- * -----------------------------------------------------------------------
- */
 (function () {
   'use strict';
 
   var REPO = 'bygcds/Rally-Client';
   var API = 'https://api.github.com/repos/' + REPO + '/releases/latest';
   var LANGS = ['es', 'en', 'pt'];
-
-  /* ---------------- traducciones ---------------- */
 
   var T = {
     en: {
@@ -116,6 +102,8 @@
     }
   };
   Object.assign(T.en, {
+    'shot.replays': 'Settings → Replays', 'shot.replays.alt': 'The Replays tab in Rally’s settings',
+    'shot.perf': 'Settings → Performance', 'shot.perf.alt': 'The Performance tab in Rally’s settings',
     'nav.details': 'Details', 'more': 'See details →', 'more2': 'See what’s new →',
     'f1.t': 'Unlocked FPS',
     'f6.d': 'Matches you play in are recorded. <code>.hbr2</code> files open with a double click in Rally.',
@@ -191,6 +179,8 @@
     'q8.q': 'How do I move my identity to another PC?', 'q8.a': 'Export a backup in Settings → Account and import it on the other computer, or copy your private key and paste it there with Import. Don’t share the file or the key: whoever has it can pose as you.'
   });
   Object.assign(T.pt, {
+    'shot.replays': 'Configurações → Replays', 'shot.replays.alt': 'A aba Replays nas configurações do Rally',
+    'shot.perf': 'Configurações → Desempenho', 'shot.perf.alt': 'A aba Desempenho nas configurações do Rally',
     'nav.details': 'Detalhes', 'more': 'Ver detalhes →', 'more2': 'Ver novidades →',
     'f1.t': 'FPS desbloqueado',
     'f6.d': 'As partidas em que você joga são gravadas. Arquivos <code>.hbr2</code> abrem com duplo clique no Rally.',
@@ -266,20 +256,17 @@
     'q8.q': 'Como passo minha identidade para outro PC?', 'q8.a': 'Exporte um backup em Configurações → Conta e importe no outro computador, ou copie sua chave privada e cole lá com Importar. Não compartilhe o arquivo nem a chave: quem a tiver pode se passar por você.'
   });
 
-  // Español: textos que no están como atributo en el HTML.
   var ES_EXTRA = {
     'news.error': 'No se pudieron cargar las novedades. Inténtalo más tarde.',
     'news.latest': 'Última', 'type.new': 'Nuevo', 'type.improved': 'Mejora', 'type.fixed': 'Arreglo',
     'shot.rooms.alt': 'La lista de salas de Rally', 'shot.room.alt': 'Una sala en Rally',
-    'shot.image.alt': 'La pestaña Imagen de los ajustes de Rally', 'shot.kits.alt': 'La pestaña Uniformes de los ajustes de Rally',
+    'shot.image.alt': 'La pestaña Imagen de los ajustes de Rally', 'shot.replays.alt': 'La pestaña Replays de los ajustes de Rally', 'shot.perf.alt': 'La pestaña Rendimiento de los ajustes de Rally', 'shot.kits.alt': 'La pestaña Uniformes de los ajustes de Rally',
     'v.label': 'Versión {v}', 'v.file': '{name} · {size} MB'
   };
 
-  /* ---------------- estado ---------------- */
-
   var lang = 'es';
-  var release = null;      // { tag, name, url, size }
-  var changelog = null;    // objeto de changelog.json
+  var release = null;
+  var changelog = null;
   var changelogFailed = false;
 
   function $all(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
@@ -295,12 +282,10 @@
     try {
       var saved = localStorage.getItem('rally-lang');
       if (LANGS.indexOf(saved) !== -1) return saved;
-    } catch (e) { /* sin almacenamiento: da igual */ }
+    } catch (e) { }
     var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
     return LANGS.indexOf(nav) !== -1 ? nav : 'es';
   }
-
-  /* ---------------- idioma ---------------- */
 
   function remember(el, attr, value) {
     if (el.dataset[attr] === undefined) el.dataset[attr] = value;
@@ -309,7 +294,7 @@
   function applyLang(next) {
     lang = next;
     document.documentElement.lang = lang;
-    try { localStorage.setItem('rally-lang', lang); } catch (e) { /* ok */ }
+    try { localStorage.setItem('rally-lang', lang); } catch (e) { }
 
     $all('[data-i18n]').forEach(function (el) {
       remember(el, 'es', el.textContent);
@@ -324,15 +309,13 @@
     $all('[data-i18n-alt]').forEach(function (el) { el.alt = t(el.getAttribute('data-i18n-alt')); });
     $all('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
 
-    document.title = lang === 'en' ? 'Rally — Unofficial HaxBall client for Windows'
-      : lang === 'pt' ? 'Rally — Cliente não oficial de HaxBall para Windows'
-      : 'Rally — Cliente no oficial de HaxBall para Windows';
+    document.title = lang === 'en' ? 'Rally · Unofficial HaxBall client for Windows'
+      : lang === 'pt' ? 'Rally · Cliente não oficial de HaxBall para Windows'
+      : 'Rally · Cliente no oficial de HaxBall para Windows';
 
     renderRelease();
     renderChangelog();
   }
-
-  /* ---------------- descarga ---------------- */
 
   function renderRelease() {
     if (!release) return;
@@ -345,7 +328,7 @@
 
   function loadRelease() {
     var cached = null;
-    try { cached = JSON.parse(sessionStorage.getItem('rally-release') || 'null'); } catch (e) { /* ok */ }
+    try { cached = JSON.parse(sessionStorage.getItem('rally-release') || 'null'); } catch (e) { }
     if (cached && Date.now() - cached.at < 10 * 60 * 1000) { release = cached.data; renderRelease(); return; }
 
     fetch(API, { headers: { Accept: 'application/vnd.github+json' } })
@@ -354,18 +337,15 @@
         var exe = (d.assets || []).filter(function (a) { return /\.exe$/i.test(a.name); })[0];
         release = {
           version: String(d.tag_name || '').replace(/^v/, ''),
-          // Sin .exe en la Release: el botón sigue llevando a la página de la Release.
           url: exe ? exe.browser_download_url : (d.html_url || 'https://github.com/' + REPO + '/releases/latest'),
           name: exe ? exe.name : '',
           size: exe ? exe.size : 0
         };
-        try { sessionStorage.setItem('rally-release', JSON.stringify({ at: Date.now(), data: release })); } catch (e) { /* ok */ }
+        try { sessionStorage.setItem('rally-release', JSON.stringify({ at: Date.now(), data: release })); } catch (e) { }
         renderRelease();
       })
-      .catch(function () { /* el enlace por defecto (Releases/latest) ya funciona */ });
+      .catch(function () { });
   }
-
-  /* ---------------- novedades ---------------- */
 
   function pick(obj) {
     if (!obj) return '';
@@ -417,17 +397,24 @@
       .catch(function () { changelogFailed = true; renderChangelog(); });
   }
 
-  /* ---------------- capturas que aún no existen ---------------- */
-
   function watchShots() {
-    $all('.shot-body img').forEach(function (img) {
-      function mark() { img.parentNode.classList.add('empty'); }
-      if (img.complete && img.naturalWidth === 0) mark();
-      img.addEventListener('error', mark);
+    $all('.shot img').forEach(function (img) {
+      var fig = img.closest('.shot');
+      function fail() {
+        var fb = img.getAttribute('data-fallback');
+        if (fb && img.getAttribute('src') !== fb) {
+          img.setAttribute('data-i18n-alt', img.getAttribute('data-fallback-alt'));
+          img.alt = t(img.getAttribute('data-fallback-alt'));
+          img.src = fb;
+          return;
+        }
+        fig.hidden = true;
+        if (fig.id === 'hero-shot') document.getElementById('top').classList.add('solo');
+      }
+      if (img.complete && img.naturalWidth === 0) fail();
+      img.addEventListener('error', fail);
     });
   }
-
-  /* ---------------- arranque ---------------- */
 
   document.addEventListener('DOMContentLoaded', function () {
     $all('.lang button').forEach(function (b) {
