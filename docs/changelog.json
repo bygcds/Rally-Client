@@ -1,6 +1,88 @@
 {
   "versions": [
     {
+      "version": "0.1.2",
+      "title": {
+        "es": "Saturación, teclas y tema GTA VI",
+        "en": "Saturation, keys and GTA VI theme",
+        "pt": "Saturação, teclas e tema GTA VI"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Saturación: un deslizador (50% a 200%) en Ajustes → Imagen para darle más color al juego. Solo lo ves tú.",
+            "en": "Saturation: a slider (50% to 200%) in Settings → Image to give the game more color. Only you see it.",
+            "pt": "Saturação: um controle deslizante (50% a 200%) em Configurações → Imagem para dar mais cor ao jogo. Só você vê."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "La saturación se aplica dentro del juego, sin filtros sobre la pantalla: casi no cuesta FPS.",
+            "en": "Saturation is applied inside the game, with no screen filter: it costs almost no FPS.",
+            "pt": "A saturação é aplicada dentro do jogo, sem filtros sobre a tela: quase não custa FPS."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Set de marcadores: elige cómo se ve el marcador en Ajustes → Marcador, con vista previa. Incluye el estilo Champions League (con los códigos de equipo que tú escribas). Solo lo ves tú.",
+            "en": "Scoreboard set: choose how the scoreboard looks in Settings → Scoreboard, with a live preview. Includes the Champions League style (with the team codes you type). Only you see it.",
+            "pt": "Conjunto de placares: escolha como o placar aparece em Ajustes → Placar, com pré-visualização. Inclui o estilo Champions League (com os códigos de equipe que você digitar). Só você vê."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Comando /fakeping: pon el ping que ven los demás en la lista de jugadores (/fakeping 67). Con varios valores los alterna (/fakeping 67 64 69). Escríbelo solo para apagarlo o reanudarlo. Es solo decoración: tu juego y tu medidor /net siguen con el ping real.",
+            "en": "New /fakeping command: set the ping others see in the player list (/fakeping 67). With several values it alternates them (/fakeping 67 64 69). Type it alone to turn it off or resume it. Decoration only: your game and your /net meter keep using the real ping.",
+            "pt": "Comando /fakeping: defina o ping que os outros veem na lista de jogadores (/fakeping 67). Com vários valores, ele os alterna (/fakeping 67 64 69). Digite sozinho para desligar ou retomar. É só decoração: seu jogo e seu medidor /net continuam com o ping real."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Los anuncios grandes de la partida (¡Gol!, ¡Victoria!, fin del tiempo y pausa) ahora salen en tu idioma.",
+            "en": "The big on-screen match announcements (goal, victory, time up and pause) now follow your language.",
+            "pt": "Os anúncios grandes da partida (gol, vitória, fim do tempo e pausa) agora aparecem no seu idioma."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Más mensajes del juego traducidos: texto de controles, avisos del chat (entradas, expulsiones, admin, estadio) y respuestas de los comandos.",
+            "en": "More of the game's messages are translated: controls help, chat notices (joins, kicks, admin, stadium) and command replies.",
+            "pt": "Mais mensagens do jogo traduzidas: texto de controles, avisos do chat (entradas, expulsões, admin, estádio) e respostas dos comandos."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Marcador más limpio: sin el texto Rojo/Azul y con los números centrados.",
+            "en": "Cleaner scoreboard: no Red/Blue text and centered numbers.",
+            "pt": "Placar mais limpo: sem o texto Vermelho/Azul e com os números centralizados."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Teclas en pantalla (experimental): muestra W A S D y la patada en la esquina que elijas, con tamaño, distancia al borde y opacidad ajustables (Ajustes → Teclas).",
+            "en": "On-screen keys (experimental): shows W A S D and the kick in the corner you choose, with adjustable size, edge distance and opacity (Settings → Keys).",
+            "pt": "Teclas na tela (experimental): mostra W A S D e o chute no canto que você escolher, com tamanho, distância da borda e opacidade ajustáveis (Configurações → Teclas)."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Temas: nuevo tema GTA VI con degradado violeta y magenta (Ajustes → Interfaz → Tema).",
+            "en": "Themes: new GTA VI theme with a violet and magenta gradient (Settings → Interface → Theme).",
+            "pt": "Temas: novo tema GTA VI com degradê violeta e magenta (Configurações → Interface → Tema)."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.1",
       "title": {
         "es": "Uniformes de ejemplo",
