@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "0.1.21",
+      "title": {
+        "es": "Pantalla completa",
+        "en": "Fullscreen",
+        "pt": "Tela cheia"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Pantalla completa: pulsa F11 para activarla o desactivarla, en cualquier momento (también dentro de una sala).",
+            "en": "Fullscreen: press F11 to turn it on or off at any time (also inside a room).",
+            "pt": "Tela cheia: pressione F11 para ativar ou desativar a qualquer momento (também dentro de uma sala)."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.2",
       "title": {
         "es": "Saturación, teclas y tema GTA VI",
