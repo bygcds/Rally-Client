@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "0.1.22",
+      "title": {
+        "es": "Salas de MrHost",
+        "en": "MrHost rooms",
+        "pt": "Salas do MrHost"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Salas de MrHost dentro de la lista: botón «MrHost Salas» para ver sus salas con jugadores, clave y país, y entrar directo sin buscar el link.",
+            "en": "MrHost rooms inside the room list: a “MrHost Rooms” button to see their rooms with players, password and country, and join straight away without hunting for the link.",
+            "pt": "Salas do MrHost dentro da lista: botão «Salas MrHost» para ver as salas com jogadores, senha e país, e entrar direto sem procurar o link."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.21",
       "title": {
         "es": "Pantalla completa",
