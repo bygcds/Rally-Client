@@ -1,6 +1,80 @@
 {
   "versions": [
     {
+      "version": "0.1.23",
+      "title": {
+        "es": "Marcadores, daltonismo y tema GTA VI",
+        "en": "Scoreboards, color blind mode and GTA VI theme",
+        "pt": "Placares, modo daltonismo e tema GTA VI"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Set de marcadores: elige cómo se ve el marcador en Ajustes → Marcador, con vista previa. Incluye Champions League, Copa América 2024, Eurocopa 2024, Premier League, LaLiga, Serie A, Bundesliga, Copa Libertadores, Brasileirão y Europa League. Solo lo ves tú.",
+            "en": "Scoreboard set: choose how the scoreboard looks in Settings → Scoreboard, with a live preview. Includes Champions League, Copa América 2024, Euro 2024, Premier League, LaLiga, Serie A, Bundesliga, Copa Libertadores, Brasileirão and Europa League. Only you see it.",
+            "pt": "Conjunto de placares: escolha como o placar aparece em Ajustes → Placar, com pré-visualização. Inclui Champions League, Copa América 2024, Eurocopa 2024, Premier League, LaLiga, Serie A, Bundesliga, Copa Libertadores, Brasileirão e Europa League. Só você vê."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Posición y tamaño del marcador: elige el lugar (arriba o abajo; izquierda, centro o derecha), el tamaño (40 a 200 %) y la distancia al borde, con vista previa. Si las teclas (Keystrokes) quedan en el mismo sitio, se apartan solas.",
+            "en": "Scoreboard position and size: choose the place (top or bottom; left, center or right), the size (40 to 200 %) and the distance from the edge, with a preview. If the keystrokes overlay ends up in the same spot, it moves out of the way on its own.",
+            "pt": "Posição e tamanho do placar: escolha o lugar (em cima ou embaixo; esquerda, centro ou direita), o tamanho (40 a 200 %) e a distância da borda, com pré-visualização. Se as teclas (Keystrokes) ficarem no mesmo lugar, elas se afastam sozinhas."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Color de uniforme en los marcadores: las líneas de color de cada equipo siguen el uniforme que ves en la sala (el de la sala o el tuyo), con 1 a 3 colores. Se puede apagar en Ajustes → Marcador.",
+            "en": "Kit colors on the scoreboards: each team's color lines follow the kit you see in the room (the room's or yours), with 1 to 3 colors. Can be turned off in Settings → Scoreboard.",
+            "pt": "Cor do uniforme nos placares: as linhas de cor de cada equipe seguem o uniforme que você vê na sala (o da sala ou o seu), com 1 a 3 cores. Pode desligar em Ajustes → Placar."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Códigos de equipo en el marcador: escribe hasta 4 letras para cada equipo (por ejemplo RMA y STU).",
+            "en": "Team codes on the scoreboard: type up to 4 characters for each team (for example RMA and STU).",
+            "pt": "Códigos de equipe no placar: digite até 4 caracteres para cada equipe (por exemplo RMA e STU)."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Modo daltonismo (Ajustes → Imagen): protanopia, deuteranopia o tritanopia. Corrige los colores del campo para distinguir mejor equipos y balón, y usa una paleta azul y naranja en la interfaz (equipos, ping y marcador). Solo lo ves tú.",
+            "en": "Color blind mode (Settings → Image): protanopia, deuteranopia or tritanopia. Corrects the pitch colors to tell teams and ball apart more easily, and uses a blue and orange palette in the interface (teams, ping and scoreboard). Only you see it.",
+            "pt": "Modo daltonismo (Configurações → Imagem): protanopia, deuteranopia ou tritanopia. Corrige as cores do campo para distinguir melhor times e bola, e usa uma paleta azul e laranja na interface (times, ping e placar). Só você vê."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Tema GTA VI más completo: la pantalla de elegir apodo ya no lleva foto y usa el degradado, la lista de jugadores y el panel de la sala toman los colores del tema, y los títulos usan una tipografía propia con degradado.",
+            "en": "More complete GTA VI theme: the nickname screen no longer has a photo and uses the gradient, the player list and room panel follow the theme colors, and titles use their own typeface with a gradient.",
+            "pt": "Tema GTA VI mais completo: a tela de escolher apelido não tem mais foto e usa o degradê, a lista de jogadores e o painel da sala seguem as cores do tema, e os títulos usam uma tipografia própria com degradê."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Atajos de teclado (Ajustes → Atajos): captura de la ventana al portapapeles (F9), mostrar/ocultar marcador y teclas, GIF y fakeping on/off, grabar/parar y salir de la sala (como !bb). Eliges cualquier tecla y no se activan mientras escribes en el chat.",
+            "en": "Keyboard shortcuts (Settings → Shortcuts): window screenshot to the clipboard (F9), show/hide scoreboard and keys, GIF and fakeping on/off, start/stop recording and leave room (like !bb). Pick any key; they never trigger while you type in chat.",
+            "pt": "Atalhos de teclado (Ajustes → Atalhos): captura da janela para a área de transferência (F9), mostrar/ocultar placar e teclas, GIF e fakeping ligar/desligar, gravar/parar e sair da sala (como !bb). Escolha qualquer tecla; não ativam enquanto você escreve no chat."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "El marcador se puede apagar: opción «Mostrar el marcador» en Ajustes → Marcador (encendido por defecto).",
+            "en": "The scoreboard can be turned off: «Show the scoreboard» option in Settings → Scoreboard (on by default).",
+            "pt": "O placar pode ser desligado: opção «Mostrar o placar» em Ajustes → Placar (ligado por padrão)."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.22",
       "title": {
         "es": "Salas de MrHost",
@@ -58,14 +132,6 @@
             "es": "La saturación se aplica dentro del juego, sin filtros sobre la pantalla: casi no cuesta FPS.",
             "en": "Saturation is applied inside the game, with no screen filter: it costs almost no FPS.",
             "pt": "A saturação é aplicada dentro do jogo, sem filtros sobre a tela: quase não custa FPS."
-          }
-        },
-        {
-          "type": "new",
-          "text": {
-            "es": "Set de marcadores: elige cómo se ve el marcador en Ajustes → Marcador, con vista previa. Incluye el estilo Champions League (con los códigos de equipo que tú escribas). Solo lo ves tú.",
-            "en": "Scoreboard set: choose how the scoreboard looks in Settings → Scoreboard, with a live preview. Includes the Champions League style (with the team codes you type). Only you see it.",
-            "pt": "Conjunto de placares: escolha como o placar aparece em Ajustes → Placar, com pré-visualização. Inclui o estilo Champions League (com os códigos de equipe que você digitar). Só você vê."
           }
         },
         {
