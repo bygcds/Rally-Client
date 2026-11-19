@@ -1,6 +1,40 @@
 {
   "versions": [
     {
+      "version": "0.1.24",
+      "title": {
+        "es": "Más marcadores",
+        "en": "More scoreboards",
+        "pt": "Mais placares"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Cinco marcadores nuevos: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League y Mundial 2026, con las líneas de color de uniforme de cada equipo.",
+            "en": "Five new scoreboards: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League and World Cup 2026, with each team's kit color lines.",
+            "pt": "Cinco novos placares: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League e Copa do Mundo 2026, com as linhas de cor do uniforme de cada equipe."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Banderas en el marcador del Mundial 2026: escribe el código del país en Ajustes → Marcador (ESP, ARG, FRA, GER, ENG...) y aparece su bandera. Sin código de país no se muestra ninguna.",
+            "en": "Flags on the World Cup 2026 scoreboard: type the country code in Settings → Scoreboard (ESP, ARG, FRA, GER, ENG...) and its flag shows up. With no country code no flag is shown.",
+            "pt": "Bandeiras no placar da Copa do Mundo 2026: digite o código do país em Ajustes → Placar (ESP, ARG, FRA, GER, ENG...) e a bandeira aparece. Sem código de país nenhuma bandeira é mostrada."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "La lista de marcadores en Ajustes ahora se ve en 2 columnas, con 2 marcadores por fila.",
+            "en": "The scoreboard list in Settings now shows 2 columns, with 2 scoreboards per row.",
+            "pt": "A lista de placares em Ajustes agora aparece em 2 colunas, com 2 placares por linha."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.23",
       "title": {
         "es": "Marcadores, daltonismo y tema GTA VI",

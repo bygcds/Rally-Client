@@ -3,307 +3,218 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rally · Cliente no oficial de HaxBall para Windows</title>
-<meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows: FPS desbloqueados, tu propia imagen, uniformes, replays automáticos y actualizaciones con un clic.">
-<meta name="theme-color" content="#0a0a0a">
-<meta property="og:title" content="Rally · Cliente no oficial de HaxBall">
-<meta property="og:description" content="FPS desbloqueados, uniformes, replays automáticos y actualizaciones con un clic. Para Windows.">
-<meta property="og:type" content="website">
+<title>Rally, cliente no oficial de HaxBall para Windows</title>
+<meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows. FPS sin tope, replays automáticos, estadísticas y 15 marcadores.">
+<meta name="theme-color" content="#1d1f21">
+<meta property="og:title" content="Rally, cliente no oficial de HaxBall">
+<meta property="og:description" content="Sin tope de FPS, replays automáticos, estadísticas y 15 marcadores. Para Windows.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="assets/icon-128.png">
-<link rel="preload" href="assets/fonts/chakra-petch-700-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
-
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Rally"><img src="assets/logo.png" alt="" width="30" height="30">Rally</a>
-    <nav class="nav-links" aria-label="Principal">
-      <a href="#funciones" data-i18n="nav.features">Funciones</a>
-      <a href="#detalles" data-i18n="nav.details">Detalles</a>
-      <a href="#capturas" data-i18n="nav.screens">Capturas</a>
-      <a href="#novedades" data-i18n="nav.news">Novedades</a>
-      <a href="#faq" data-i18n="nav.faq">Preguntas</a>
-      <a href="#descargar" data-i18n="nav.download">Descargar</a>
-    </nav>
-    <div class="lang" role="group" aria-label="Idioma / Language">
-      <button type="button" data-lang="es" aria-pressed="true">ES</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
-    </div>
-  </div>
-</header>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Rally"><img src="assets/logo.png" alt="" width="30" height="30">Rally</a>
+  <nav aria-label="Principal"><a href="#salas">Salas</a><a href="#partida">Partida</a><a href="#imagen">Imagen</a><a href="#marcadores">Marcadores</a><a href="#novedades">Novedades</a></nav>
+  <a class="btn" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar</a>
+</div></header>
 
 <main id="main">
-
 <section class="hero" id="top">
+  <img class="mark" src="assets/logo.png" alt="" width="256" height="256">
   <div class="wrap">
-    <div>
-      <span class="eyebrow" data-i18n="hero.eyebrow">Cliente no oficial · Windows</span>
-      <h1 data-i18n="hero.title">HaxBall para jugar en serio</h1>
-      <p class="lead" data-i18n="hero.lead">Más fluidez, tu propia imagen, uniformes, replays automáticos y actualizaciones con un clic.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
-          <span data-i18n="hero.cta">Descargar para Windows</span>
-        </a>
-        <a class="btn" href="#novedades" data-i18n="hero.news">Ver novedades</a>
-      </div>
-      <div class="hero-meta">
-        <span hidden><strong data-version></strong></span>
-        <span data-i18n="hero.meta1">Windows 10 y 11</span>
-        <span data-i18n="hero.meta2">Sin permisos de administrador</span>
-      </div>
+    <h1>Rally</h1>
+    <p class="what">Cliente no oficial de HaxBall para Windows.</p>
+    <p class="lead">Sin tope de FPS, replays automáticos, estadísticas y 15 marcadores.</p>
+    <div class="cta">
+      <a class="btn" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar</a>
+      <a class="btn ghost" href="#novedades">Novedades de la 0.1.24</a>
     </div>
-
-    <figure class="shot" id="hero-shot"><img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" data-fallback="assets/shots/uniformes.png" data-fallback-alt="shot.kits.alt" width="1600" height="1000" fetchpriority="high"></figure>
+    <p class="meta">Windows 10 y 11. <span data-version></span></p>
   </div>
 </section>
 
-<section id="funciones">
+
+<section id="que-trae">
   <div class="wrap">
-    <h2 class="sec-title" data-i18n="features.title">Qué trae</h2>
-    <p class="sec-lead" data-i18n="features.lead">Todo se configura desde el engranaje de la barra superior del cliente.</p>
-
-    <div class="grid">
-      <article class="card"><h3 data-i18n="f1.t">FPS desbloqueados</h3><p data-i18n-html="f1.d">FPS desbloqueados con un medidor integrado. Escribe <code>/fps</code> para ver los tuyos.</p><a class="more" href="#d-cmds" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f2.t">Color del balón</h3><p data-i18n="f2.d">Elige el color que mejor veas. Solo lo ves tú.</p></article>
-      <article class="card"><h3 data-i18n="f3.t">Resolución estirada</h3><p data-i18n="f3.d">4:3, 5:4 o la que escribas, como en los shooters competitivos.</p></article>
-      <article class="card"><h3 data-i18n="f4.t">Uniformes</h3><p data-i18n="f4.d">Personalizados, con vista previa, biblioteca y asignación por equipo. Más selecciones y clubes de ejemplo con un clic. Solo los ves tú.</p></article>
-      <article class="card"><h3 data-i18n-html="f5.t"><span>/gif</span></h3><p data-i18n="f5.d">Avatares animados en tus partidas.</p><a class="more" href="#d-cmds" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f6.t">Replays automáticos</h3><p data-i18n-html="f6.d">Se graban las partidas en las que juegas. Los archivos <code>.hbr2</code> se abren con doble clic en Rally.</p><a class="more" href="#d-replays" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f7.t">Estadísticas</h3><p data-i18n="f7.d">Tus goles, asistencias y horas jugadas, contados solos en tus partidas.</p><a class="more" href="#d-stats" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f8.t">Última sala y favoritos</h3><p data-i18n="f8.d">Vuelve a tu última sala en un clic, marca favoritas y filtra la lista.</p><a class="more" href="#d-rooms" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f9.t">Discord Rich Presence</h3><p data-i18n="f9.d">Tu perfil muestra en qué sala juegas, el marcador y un botón para unirse. Cada dato se apaga por separado.</p><a class="more" href="#d-discord" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f10.t">Identidad y respaldo</h3><p data-i18n="f10.d">Copia tu identidad de HaxBall y guarda un respaldo de tu nick, teclas y ajustes.</p><a class="more" href="#d-account" data-i18n="more">Ver detalle →</a></article>
-      <article class="card"><h3 data-i18n="f11.t">Interfaz oscura</h3><p data-i18n="f11.d">Lista de salas, sala y ajustes con un mismo diseño, claro de leer y ligero.</p></article>
-      <article class="card"><h3 data-i18n="f12.t">Actualizaciones con un clic</h3><p data-i18n="f12.d">Rally avisa de cada versión nueva, se descarga e instala sola y te enseña lo que cambió.</p><a class="more" href="#novedades" data-i18n="more2">Ver novedades →</a></article>
-    </div>
-
-    <p class="also"><span data-i18n="chip1">Español · English · Português</span>
-      <span data-i18n="chip2">Panel translúcido</span>
-      <span data-i18n="chip3">Opacidad y tamaño de letra del chat</span>
-      <span data-i18n="chip4">Medidor de ping, jitter y pérdida</span></p>
+    <h2>Qué trae</h2>
+    <dl class="cmds" style="margin-top:28px">
+      <dt><a href="#salas">Salas</a></dt><dd>Salas de MrHost, tu última sala y favoritas.</dd>
+      <dt><a href="#partida">En la partida</a></dt><dd>FPS, comandos, atajos de teclado y estadísticas.</dd>
+      <dt><a href="#imagen">Imagen</a></dt><dd>Balón, resolución, saturación, daltonismo y temas.</dd>
+      <dt><a href="#marcadores">Marcadores</a></dt><dd>15 estilos de competiciones reales.</dd>
+      <dt><a href="#replays">Replays y uniformes</a></dt><dd>Grabación automática y uniformes propios.</dd>
+    </dl>
   </div>
 </section>
 
-<section class="alt" id="detalles">
+<section class="paper" id="salas">
   <div class="wrap">
-    <h2 class="sec-title" data-i18n="details.title">Con detalle</h2>
-    <p class="sec-lead" data-i18n="details.lead">Cómo funciona cada parte y qué opciones tiene.</p>
-    <div class="details">
-    <article class="detail" id="d-stats">
-      <header class="detail-head">
-        <h3 data-i18n="d1.t">Estadísticas</h3>
-        <p data-i18n="d1.lead">Tus goles, asistencias y tiempo jugado, contados por Rally en las partidas en las que juegas y guardados en tu PC.</p>
-        <span class="where" data-i18n="d1.where">Lista de salas → «Tus estadísticas» · /stats</span>
-      </header>
-      <div class="detail-body">
-        <dl class="opts">
-        <div><dt data-i18n="d1.o1.t">Aviso al marcar</dt><dd data-i18n-html="d1.o1.d">Cada gol o asistencia tuya saca un aviso en el chat con tu total, por ejemplo: «Gol · Total: 13 goles · 7 asistencias · 3h 20m jugadas».</dd></div>
-        <div><dt data-i18n="d1.o2.t">Tarjeta «Tus estadísticas»</dt><dd data-i18n-html="d1.o2.d">Fuera de la sala, en la barra lateral de la lista de salas: tus goles, asistencias y horas.</dd></div>
-        <div><dt data-i18n="d1.o3.t">/stats</dt><dd data-i18n-html="d1.o3.d">Muestra tu resumen en el chat, con los goles en propia. <code>/stats reset confirmar</code> borra todos los totales.</dd></div>
-        <div><dt data-i18n="d1.o4.t">Cuándo cuenta</dt><dd data-i18n-html="d1.o4.d">Solo en partidas de verdad: jugando en rojo o azul y con al menos un jugador en cada equipo. Entrenar solo no suma, y el tiempo es el de la partida (en pausa no corre). Las repeticiones no cuentan.</dd></div>
-        <div><dt data-i18n="d1.o5.t">Cómo se reparte</dt><dd data-i18n-html="d1.o5.d">Con la misma regla que usan los bots de sala: quien toca el balón por última vez en el equipo que anota se lleva el gol, y el toque anterior de otro jugador del mismo equipo es la asistencia. Si el último toque fue de un rival, es gol en propia y no hay asistencia. Solo se cuentan los tuyos.</dd></div>
-        <div><dt data-i18n="d1.o6.t">Un detalle</dt><dd data-i18n-html="d1.o6.d">El juego avisa de las patadas, no de los roces al conducir el balón: un toque sin patear no cuenta como toque.</dd></div>
-        <div><dt data-i18n="d1.o7.t">Dónde se guardan</dt><dd data-i18n-html="d1.o7.d">Solo en tu PC. El respaldo de Ajustes → Cuenta no las incluye. Como otras funciones que leen la partida, necesitan que el parche de Rally funcione con la versión actual de HaxBall.</dd></div>
-        </dl>
-      </div>
-    </article>
-    <article class="detail" id="d-replays">
-      <header class="detail-head">
-        <h3 data-i18n="d2.t">Replays</h3>
-        <p data-i18n="d2.lead">Rally graba tus partidas solo y abre cualquier .hbr2 con doble clic.</p>
-        <span class="where" data-i18n="d2.where">Ajustes → Replays</span>
-      </header>
-      <div class="detail-body">
-        <h4 class="opts-title" data-i18n="d2.g1">Grabar</h4>
-        <dl class="opts">
-        <div><dt data-i18n="d2.o1.t">Guardar automáticamente</dt><dd data-i18n-html="d2.o1.d">Sin diálogo «Guardar como»: el archivo va directo a la carpeta.</dd></div>
-        <div><dt data-i18n="d2.o2.t">Grabar cada partida</dt><dd data-i18n-html="d2.o2.d">Auto-REC empieza solo y, si sales a mitad de partida, la guarda antes de salir. Necesita el guardado automático. También con <code>/autorec on</code> y <code>/autorec off</code>.</dd></div>
-        <div><dt data-i18n="d2.o3.t">Solo grabar si estoy jugando</dt><dd data-i18n-html="d2.o3.d">Ignora las partidas que solo estás mirando. Tampoco graba mientras entrenas solo.</dd></div>
-        <div><dt data-i18n="d2.o4.t">Carpeta de replays</dt><dd data-i18n-html="d2.o4.d">Abrir, Cambiar… o Restablecer. Los replays (.hbr2) y los mapas (.hbs) se guardan solos y se conservan al actualizar.</dd></div>
-        <div><dt data-i18n="d2.o5.t">Nombre del archivo</dt><dd data-i18n-html="d2.o5.d">Fecha, hora, sala y marcador: <code>2026-11-14_21h05_MiSala_3-2.hbr2</code>.</dd></div>
-        </dl>
-        <h4 class="opts-title" data-i18n="d2.g2">Abrir un .hbr2</h4>
-        <dl class="opts">
-        <div><dt data-i18n="d2.p1.t">Doble clic</dt><dd data-i18n-html="d2.p1.d">Rally se registra como visor de archivos .hbr2: haz doble clic en uno y se abre en el reproductor del juego.</dd></div>
-        <div><dt data-i18n="d2.p2.t">Desde la lista de salas</dt><dd data-i18n-html="d2.p2.d">Se abre al instante.</dd></div>
-        <div><dt data-i18n="d2.p3.t">Al abrir Rally con la grabación</dt><dd data-i18n-html="d2.p3.d">Si ya tienes un apodo guardado, entra solo; la primera vez no se toca nada.</dd></div>
-        <div><dt data-i18n="d2.p4.t">Dentro de una sala</dt><dd data-i18n-html="d2.p4.d">Rally pregunta antes, con 8 segundos para decidir: «Salir y ver» o «Cancelar». Si hay una partida en curso, avisa de que la abandonarás.</dd></div>
-        <div><dt data-i18n="d2.p5.t">Viendo otra grabación</dt><dd data-i18n-html="d2.p5.d">Sale de ella y abre la nueva.</dd></div>
-        <div><dt data-i18n="d2.p6.t">El visor</dt><dd data-i18n-html="d2.p6.d">La barra de reproducción sale en tu idioma: reiniciar, pausar, más lento, más rápido y salir. El chat queda desactivado en las repeticiones.</dd></div>
-        </dl>
-      </div>
-    </article>
-    <article class="detail" id="d-rooms">
-      <header class="detail-head">
-        <h3 data-i18n="d3.t">Lista de salas</h3>
-        <p data-i18n="d3.lead">La lista de salas, pensada para encontrar y volver rápido.</p>
-        <span class="where" data-i18n="d3.where">Barra lateral de la lista de salas</span>
-      </header>
-      <div class="detail-body">
-        <dl class="opts">
-        <div><dt data-i18n="d3.o1.t">Última sala</dt><dd data-i18n-html="d3.o1.d">Un botón con el nombre de tu última sala te devuelve a ella en un clic. Sirve si te echaron, se cayó la conexión o cerraste sin querer; Rally la va guardando mientras juegas.</dd></div>
-        <div><dt data-i18n="d3.o2.t">Favoritos</dt><dd data-i18n-html="d3.o2.d">Marca salas con la estrella y filtra para ver solo las favoritas.</dd></div>
-        <div><dt data-i18n="d3.o3.t">Buscar y filtrar</dt><dd data-i18n-html="d3.o3.d">Búsqueda por nombre y filtros «Con pass», «Llenas» y «Vacías».</dd></div>
-        <div><dt data-i18n="d3.o4.t">Cierre protegido</dt><dd data-i18n-html="d3.o4.d">Si cierras o recargas Rally estando en una sala, te pide confirmar antes de salir.</dd></div>
-        </dl>
-      </div>
-    </article>
-    <article class="detail" id="d-discord">
-      <header class="detail-head">
-        <h3 data-i18n="d4.t">Discord Rich Presence</h3>
-        <p data-i18n="d4.lead">Tu perfil de Discord muestra lo que haces en Rally. Cada dato se puede apagar y se aplica al momento, sin reiniciar.</p>
-        <span class="where" data-i18n="d4.where">Ajustes → Varios → Discord</span>
-      </header>
-      <div class="detail-body">
-        <dl class="opts">
-        <div><dt data-i18n="d4.o1.t">Mostrar actividad</dt><dd data-i18n-html="d4.o1.d">Tu perfil muestra la sala en la que juegas. Apágalo para desactivarlo del todo.</dd></div>
-        <div><dt data-i18n="d4.o2.t">Nombre de la sala</dt><dd data-i18n-html="d4.o2.d">Si lo apagas, tu perfil dice «Jugando en una sala» en vez del nombre.</dd></div>
-        <div><dt data-i18n="d4.o3.t">Botón «Unirse»</dt><dd data-i18n-html="d4.o3.d">Los demás lo ven en tu perfil y entran a tu sala con un clic; Discord no te lo muestra a ti.</dd></div>
-        <div><dt data-i18n="d4.o4.t">Marcador de la partida</dt><dd data-i18n-html="d4.o4.d">Muestra «Rojo 2 - 1 Azul» con el tiempo mientras juegas.</dd></div>
-        <div><dt data-i18n="d4.o5.t">Qué se ve</dt><dd data-i18n-html="d4.o5.d">Jugando o espectando en una sala, buscando o mirando una sala desde la lista, o viendo una repetición (sin sala, sin marcador y sin botón).</dd></div>
-        <div><dt data-i18n="d4.o6.t">Tiempo</dt><dd data-i18n-html="d4.o6.d">El contador es el de tu sesión: no se reinicia con cada gol.</dd></div>
-        </dl>
-      </div>
-    </article>
-    <article class="detail" id="d-account">
-      <header class="detail-head">
-        <h3 data-i18n="d5.t">Identidad y respaldo</h3>
-        <p data-i18n="d5.lead">Tu identidad en HaxBall y una copia de seguridad para no perderla.</p>
-        <span class="where" data-i18n="d5.where">Ajustes → Cuenta</span>
-      </header>
-      <div class="detail-body">
-        <h4 class="opts-title" data-i18n="d5.g1">Identidad (auth)</h4>
-        <dl class="opts">
-        <div><dt data-i18n="d5.o1.t">Qué es</dt><dd data-i18n-html="d5.o1.d">Es lo que ven los admins de sala para reconocerte. Rally te deja ver y copiar la clave pública, y llevar la privada a otro equipo.</dd></div>
-        <div><dt data-i18n="d5.o2.t">Pública</dt><dd data-i18n-html="d5.o2.d">Se muestra en pantalla y se copia con «Copiar pública».</dd></div>
-        <div><dt data-i18n="d5.o3.t">Copiar privada</dt><dd data-i18n-html="d5.o3.d">Solo para usarla en otro equipo. Nunca se dibuja en pantalla: se copia al portapapeles cuando pulsas el botón. No la compartas.</dd></div>
-        <div><dt data-i18n="d5.o4.t">Importar</dt><dd data-i18n-html="d5.o4.d">Pega una clave privada (<code>idkey.…</code>) y Rally la aplica y se recarga. Si no es válida, te lo avisa.</dd></div>
-        <div><dt data-i18n="d5.o5.t">Crear nueva</dt><dd data-i18n-html="d5.o5.d">Genera otra identidad. Pide confirmar con un segundo clic y reemplaza a la actual: si no la guardaste, la pierdes.</dd></div>
-        </dl>
-        <h4 class="opts-title" data-i18n="d5.g2">Respaldo</h4>
-        <dl class="opts">
-        <div><dt data-i18n="d5.p1.t">Exportar</dt><dd data-i18n-html="d5.p1.d">Guarda tu identidad, nick, teclas y ajustes en un archivo. Incluye tu clave privada: no lo compartas.</dd></div>
-        <div><dt data-i18n="d5.p2.t">Importar</dt><dd data-i18n-html="d5.p2.d">Pide confirmar, comprueba que el archivo sea un respaldo de Rally y recarga Rally con lo guardado.</dd></div>
-        <div><dt data-i18n="d5.p3.t">Para qué sirve</dt><dd data-i18n-html="d5.p3.d">Si cambias de PC, reinstalas Windows o se borra el perfil, recuperas tu identidad (y tu admin en salas) en un clic.</dd></div>
-        </dl>
-      </div>
-    </article>
-    <article class="detail" id="d-cmds">
-      <header class="detail-head">
-        <h3 data-i18n="dc.t">Comandos</h3>
-        <p data-i18n="dc.lead">Se escriben en el chat de una sala y los resuelve Rally en tu PC: no se envían a la sala.</p>
-        <span class="where" data-i18n="dc.where">Chat de la sala</span>
-      </header>
-      <div class="detail-body">
-        <dl class="opts cmds">
-        <div><dt><code>/fps</code></dt><dd data-i18n-html="c1">Muestra u oculta el medidor de FPS. Con un número pone un tope al instante: <code>/fps 144</code>; <code>/fps 0</code> lo quita (0 o entre 30 y 2000).</dd></div>
-        <div><dt><code>/fpsmode off | unlock | novsync</code></dt><dd data-i18n-html="c2">Cambia el modo de FPS (normal, sin límite, sin vsync). Se aplica con <code>/relaunch</code>.</dd></div>
-        <div><dt><code>/gif 1 2 3</code></dt><dd data-i18n-html="c3">Avatar animado: cada frame de hasta 2 caracteres. <code>/gif</code> solo lo apaga o lo reanuda. Solo dentro de una sala.</dd></div>
-        <div><dt><code>/stats</code></dt><dd data-i18n-html="c4">Tu resumen de goles, asistencias y horas. <code>/stats reset confirmar</code> lo borra.</dd></div>
-        <div><dt><code>/autorec on | off</code></dt><dd data-i18n-html="c5">Activa o desactiva la grabación automática de cada partida.</dd></div>
-        <div><dt><code>/glass</code></dt><dd data-i18n-html="c6">Activa o desactiva el panel translúcido de la sala.</dd></div>
-        <div><dt><code>/net</code></dt><dd data-i18n-html="c7">Medidor de red con ping, jitter y pérdida en una esquina de la sala. También en Ajustes → Varios → Red.</dd></div>
-        <div><dt><code>/relaunch</code></dt><dd data-i18n-html="c8">Reinicia Rally.</dd></div>
-        <div><dt><code>!bb</code></dt><dd data-i18n-html="c9">Sale de la sala al instante, con o sin bot. Solo con el mensaje exacto <code>!bb</code>; «!bb gg» va como chat normal. Si estabas grabando, guarda el replay antes.</dd></div>
-        </dl>
-      </div>
-    </article>
+    <h2>Salas</h2>
+    <div class="split wide-l">
+      <figure class="slot" style="margin:0"><img src="assets/shots/lista-salas.png" alt="Lista de salas de Rally con las salas de MrHost" width="1260" height="820" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/lista-salas.png</code></div></div></figure>
+      <ul class="list" style="margin-top:0">
+        <li>El botón de MrHost lista sus salas y entras directo, sin buscar el link.</li>
+        <li>Si te echan o se cae la conexión, un clic te devuelve a tu última sala.</li>
+        <li>Favoritas con estrella y filtros: con pass, llenas, vacías.</li>
+        <li>Si cierras Rally dentro de una sala, te pide confirmar.</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="capturas">
+
+<section id="partida">
   <div class="wrap">
-    <h2 class="sec-title" data-i18n="screens.title">Capturas</h2>
-    <p class="sec-lead" data-i18n="screens.lead">Así se ve el cliente por dentro.</p>
-
-    <div class="gallery">
-      <figure class="shot"><img src="assets/shots/salas.png" alt="" data-i18n-alt="shot.rooms.alt" width="1600" height="1000" loading="lazy"><figcaption data-i18n="shot.rooms">Lista de salas</figcaption></figure>
-      <figure class="shot"><img src="assets/shots/sala.png" alt="" data-i18n-alt="shot.room.alt" width="1600" height="1000" loading="lazy"><figcaption data-i18n="shot.room">Dentro de una sala</figcaption></figure>
-      <figure class="shot"><img src="assets/shots/imagen.png" alt="" data-i18n-alt="shot.image.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.image">Ajustes → Imagen</figcaption></figure>
-      <figure class="shot"><img src="assets/shots/uniformes.png" alt="" data-i18n-alt="shot.kits.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.kits">Ajustes → Uniformes</figcaption></figure>
-      <figure class="shot"><img src="assets/shots/replays.png" alt="" data-i18n-alt="shot.replays.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.replays">Ajustes → Replays</figcaption></figure>
-      <figure class="shot"><img src="assets/shots/rendimiento.png" alt="" data-i18n-alt="shot.perf.alt" width="1672" height="1232" loading="lazy"><figcaption data-i18n="shot.perf">Ajustes → Rendimiento</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="novedades">
-  <div class="wrap">
-    <h2 class="sec-title" data-i18n="news.title">Novedades</h2>
-    <p class="sec-lead" data-i18n="news.lead">Lo mismo que Rally te muestra al abrir tras actualizar.</p>
-    <div class="timeline" id="timeline" aria-live="polite"><p class="muted" data-i18n="news.loading">Cargando…</p></div>
-  </div>
-</section>
-
-<section id="descargar">
-  <div class="wrap">
-    <h2 class="sec-title" data-i18n="dl.title">Descargar</h2>
-    <p class="sec-lead" data-i18n="dl.lead">Para Windows 10 y 11, 64 o 32 bits. No hace falta ser administrador.</p>
-
-    <div class="dl-panel">
-      <div class="dl-main">
-        <a class="btn btn-primary" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
-          <span data-i18n="dl.btn">Descargar Rally</span>
-        </a>
-        <p class="dl-file" data-file></p>
-        <p class="dl-note"><span data-i18n="dl.other">¿Otra versión?</span> <a href="https://github.com/bygcds/Rally-Client/releases" data-i18n="dl.all">Ver todas las Releases</a></p>
+    <h2>En la partida</h2>
+    <div class="split">
+      <div>
+        <p class="intro" style="margin:0 0 8px">Los comandos se escriben en el chat. Los resuelve Rally en tu PC y no llegan a la sala.</p>
+        <dl class="cmds">
+          <dt><code>/fps</code></dt><dd>Medidor de FPS. <code>/fps 144</code> pone un tope; <code>/fps 0</code> lo quita.</dd>
+          <dt><code>/net</code></dt><dd>Ping, jitter y pérdida.</dd>
+          <dt><code>/stats</code></dt><dd>Tus goles, asistencias y horas.</dd>
+          <dt><code>/gif 1 2 3</code></dt><dd>Avatar animado.</dd>
+          <dt><code>/fakeping 67</code></dt><dd>El ping que ven los demás. El tuyo sigue real.</dd>
+          <dt><code>!bb</code></dt><dd>Sales de la sala al instante.</dd>
+          <dt><code>/autorec</code></dt><dd>Graba cada partida, on u off.</dd>
+          <dt><code>/glass</code></dt><dd>Panel de la sala translúcido.</dd>
+        </dl>
       </div>
-
-      <ol class="steps">
-        <li class="step"><div><h3 data-i18n="dl.s1.t">Descarga el instalador</h3><p data-i18n-html="dl.s1.d">Es el archivo <code>Rally-Setup-&lt;versión&gt;.exe</code>.</p></div></li>
-        <li class="step"><div><h3 data-i18n="dl.s2.t">Ejecútalo</h3><p data-i18n="dl.s2.d">Elige la carpeta si quieres y termina la instalación. Se abre solo al acabar.</p></div></li>
-        <li class="step"><div><h3 data-i18n="dl.s3.t">Elige idioma y listo</h3><p data-i18n="dl.s3.d">La guía de bienvenida te enseña lo básico. Puedes releerla en Ajustes → Varios.</p></div></li>
-      </ol>
+      <div>
+        <h3>Atajos</h3>
+        <p class="where" style="margin:6px 0 0">No actúan mientras escribes en el chat. Tú eliges las teclas.</p>
+        <table class="keys"><tbody>
+          <tr><th>Captura de la ventana</th><td>F9 por defecto</td></tr>
+          <tr><th>Marcador</th><td>Mostrar u ocultar</td></tr>
+          <tr><th>Teclas en pantalla</th><td>Mostrar u ocultar</td></tr>
+          <tr><th>GIF y ping falso</th><td>Encender o apagar</td></tr>
+          <tr><th>Grabar</th><td>Empezar o parar</td></tr>
+          <tr><th>Salir de la sala</th><td>Como <code>!bb</code></td></tr>
+          <tr><th>Pantalla completa</th><td>F11</td></tr>
+        </tbody></table>
+        <figure class="slot" style="margin:24px 0 0;--r:4/3"><img src="assets/shots/atajos.png" alt="Ajustes de Rally, pestaña Atajos" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Atajos, con teclas asignadas.<br><code>assets/shots/atajos.png</code></div></div></figure>
+      </div>
     </div>
-
-    <div class="notes">
-      <div class="note"><h3 data-i18n="n1.t">Aviso de Windows</h3><p data-i18n="n1.d">Como el instalador aún no está firmado digitalmente, Windows puede mostrar «Windows protegió su PC». Pulsa Más información → Ejecutar de todas formas.</p></div>
-      <div class="note"><h3 data-i18n="n2.t">Descarga solo el .exe</h3><p data-i18n="n2.d">En Releases verás otros archivos (.blockmap, latest.yml, latest.json): los usa Rally para actualizarse. Tú solo necesitas el .exe, y solo desde este repositorio.</p></div>
-      <div class="note info"><h3 data-i18n="n3.t">No afiliado a HaxBall</h3><p data-i18n="n3.d">Rally es un proyecto independiente. No está afiliado ni respaldado por HaxBall ni por su autor.</p></div>
+    <div class="split wide-r" style="margin-top:36px">
+      <div>
+        <h3>FPS</h3>
+        <p style="color:var(--soft);margin-top:8px">Tres modos: normal, sin límite y sin vsync. Cambiar de modo pide reiniciar.</p>
+        <h3 style="margin-top:28px">Teclas en pantalla</h3>
+        <p style="color:var(--soft);margin-top:8px">WASD o flechas y la patada, en la esquina que quieras. Experimental.</p>
+        <h3 style="margin-top:28px">Estadísticas</h3>
+        <p style="color:var(--soft);margin-top:8px">Cada gol tuyo saca tu total en el chat. Solo cuentan partidas de verdad, y se guardan en tu PC.</p>
+      </div>
+      <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/sala.png" alt="Una partida en Rally con marcador, teclas y medidor de red" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Una partida con marcador, teclas en pantalla y medidor de red a la vista.<br><code>assets/shots/sala.png</code></div></div></figure>
     </div>
   </div>
 </section>
 
-<section class="alt" id="faq">
+
+<section class="paper" id="imagen">
   <div class="wrap">
-    <h2 class="sec-title" data-i18n="faq.title">Preguntas frecuentes</h2>
-    <div class="faq">
-      <details><summary data-i18n="q1.q">¿Dónde se guardan mis replays y mapas?</summary><div class="ans" data-i18n-html="q1.a">En <code>%APPDATA%\RallyClient\Replays</code> y <code>%APPDATA%\RallyClient\Stadiums</code>. Ajustes → Replays tiene un botón para abrir la carpeta.</div></details>
-      <details><summary data-i18n="q2.q">¿Qué datos envía Rally?</summary><div class="ans" data-i18n="q2.a">Rally no tiene servidores propios. Solo se conecta a haxball.com (el juego) y a GitHub (para comprobar y bajar actualizaciones). Tus ajustes se guardan solo en tu PC.</div></details>
-      <details><summary data-i18n="q3.q">¿Qué pasa cuando HaxBall se actualiza?</summary><div class="ans" data-i18n="q3.a">Rally modifica el juego en memoria al abrirlo. Si HaxBall cambia su código, esas funciones se desactivan solas (el juego sigue funcionando con normalidad) hasta que salga una actualización de Rally.</div></details>
-      <details><summary data-i18n="q4.q">¿Tengo que actualizar siempre?</summary><div class="ans" data-i18n="q4.a">Cada versión tiene un plazo de unos días; pasado el plazo hay que actualizar para seguir jugando. Tus ajustes y tus replays se conservan.</div></details>
-      <details><summary data-i18n="q5.q">¿Hay versión para Linux o Mac?</summary><div class="ans" data-i18n="q5.a">Por ahora solo Windows. Linux y, más adelante, Mac están en los planes.</div></details>
-      <details><summary data-i18n="q7.q">¿Dónde se guardan mis estadísticas?</summary><div class="ans" data-i18n="q7.a">Solo en tu PC, no en un servidor. Rally cuenta tus goles, asistencias y horas en partidas de verdad, y el respaldo de Ajustes → Cuenta no las incluye.</div></details>
-      <details><summary data-i18n="q8.q">¿Cómo paso mi identidad a otro PC?</summary><div class="ans" data-i18n="q8.a">Exporta un respaldo en Ajustes → Cuenta e impórtalo en el otro equipo, o copia tu clave privada y pégala allí con Importar. No compartas ni el archivo ni la clave: quien la tenga puede hacerse pasar por ti.</div></details>
-      <details><summary data-i18n="q6.q">Quiero reportar un problema o proponer algo</summary><div class="ans" data-i18n-html="q6.a">Abre un <a href="https://github.com/bygcds/Rally-Client/issues">issue</a> con tu versión de Rally (Ajustes → Varios → Acerca de) y qué estabas haciendo.</div></details>
+    <h2>Imagen</h2>
+    <p class="intro">Todo esto lo ves solo tú. Los demás siguen viendo el HaxBall de siempre.</p>
+    <div class="split wide-l">
+      <figure class="slot" style="margin:0"><img src="assets/shots/imagen.png" alt="Ajustes de Rally, pestaña Imagen" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/imagen.png</code></div></div></figure>
+      <dl class="cmds" style="margin:0">
+        <dt>Balón</dt><dd>Del color que mejor veas.</dd>
+        <dt>Resolución</dt><dd>Estirada a 4:3, 5:4 o la que escribas.</dd>
+        <dt>Saturación</dt><dd>Del 50 al 200 %, sin filtros sobre la pantalla.</dd>
+        <dt>Daltonismo</dt><dd>Protanopia, deuteranopia o tritanopia.</dd>
+        <dt>Tema</dt><dd>Rally o GTA VI.</dd>
+        <dt>Chat</dt><dd>Opacidad y tamaño de letra.</dd>
+      </dl>
+    </div>
+    <div class="split" style="margin-top:44px">
+      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/daltonismo.png" alt="El mismo campo sin corrección y con el modo daltonismo" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El mismo campo sin corrección y con modo daltonismo.<br><code>assets/shots/daltonismo.png</code></div></div></figure>
+      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/tema-gta6.png" alt="Rally con el tema GTA VI" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>La lista de salas o la sala con el tema GTA VI.<br><code>assets/shots/tema-gta6.png</code></div></div></figure>
     </div>
   </div>
 </section>
 
+
+<section id="marcadores">
+  <div class="wrap">
+    <h2>15 marcadores</h2>
+    <p class="intro">Cambias el marcador de HaxBall por el de una competición real. Solo lo ves tú.</p>
+    <div class="split wide-r" style="margin-bottom:36px">
+      <div>
+        <ul class="cols"><li>Champions League</li><li>Europa League</li><li>Premier League</li><li>LaLiga</li><li>Serie A</li><li>Bundesliga</li><li>Ligue 1</li><li>MLS</li><li>Liga Profesional</li><li>Brasileirão</li><li>Copa Libertadores</li><li>Eurocopa 2024</li><li>Copa América 2024</li><li>UEFA Nations League</li><li>Mundial 2026</li></ul>
+      </div>
+      <ul class="list" style="margin-top:0">
+        <li>Seis posiciones y tamaño del 40 al 200 %.</li>
+        <li>Las líneas de color siguen el uniforme que ves en la sala.</li>
+        <li>Códigos de hasta 4 letras por equipo. En el Mundial 2026, ESP o ARG ponen la bandera.</li>
+        <li>Un atajo de teclado lo oculta y lo muestra.</li>
+      </ul>
+    </div>
+    <figure class="slot" style="margin:0;--r:16/6"><img src="assets/shots/marcadores-15.png" alt="Los 15 marcadores de Rally, uno junto a otro" width="2000" height="750" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Los 15 marcadores en una sola imagen, en el orden de las listas de abajo.<br><code>assets/shots/marcadores-15.png</code></div></div></figure>
+    <div class="split" style="margin-top:28px">
+      <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-ajustes.png" alt="Ajustes de Rally, pestaña Marcador" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Marcador, estilos en 2 columnas con vista previa.<br><code>assets/shots/marcador-ajustes.png</code></div></div></figure>
+      <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-mundial-banderas.png" alt="Marcador del Mundial 2026 con dos banderas" width="1600" height="1200" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Marcador del Mundial 2026 con dos banderas (por ejemplo ESP y ARG).<br><code>assets/shots/marcador-mundial-banderas.png</code></div></div></figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="paper" id="replays">
+  <div class="wrap">
+    <h2>Replays y uniformes</h2>
+    <div class="split">
+      <div>
+        <p>Rally graba tus partidas solo, sin el diálogo «Guardar como». Los nombra con fecha, sala y marcador. Un doble clic en cualquier <code>.hbr2</code> lo abre en Rally.</p>
+        <figure class="slot" style="margin:22px 0 0"><img src="assets/shots/replays.png" alt="Ajustes de Rally, pestaña Replays" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/replays.png</code></div></div></figure>
+      </div>
+      <div>
+        <p>Uniformes propios con vista previa y biblioteca. Con un clic añades selecciones y clubes de ejemplo. Los ves solo tú.</p>
+        <figure class="slot" style="margin:22px 0 0"><img src="assets/shots/uniformes.png" alt="Ajustes de Rally, pestaña Uniformes" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/uniformes.png</code></div></div></figure>
+      </div>
+    </div>
+    <p style="margin-top:44px;max-width:62ch;color:var(--soft)">Además: respaldo de tu identidad, nick y ajustes en un archivo; Discord con la sala y el marcador (cada dato se apaga por separado); español, inglés y portugués.</p>
+  </div>
+</section>
+
+
+<section id="novedades">
+  <div class="wrap">
+    <h2>Novedades</h2>
+    <div class="tl" id="timeline"><p class="legend">Cargando…</p></div>
+    <p class="legend">Punto azul: nuevo. Gris: mejora. Rojo: arreglo.</p>
+  </div>
+</section>
+
+
+<section class="paper" id="descargar">
+  <div class="wrap">
+    <h2>Descargar</h2>
+    <div class="dl">
+      <div>
+        <a class="btn dark" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar Rally</a>
+        <p class="file" data-file></p>
+        <p class="file">Para Windows 10 y 11. <a href="https://github.com/bygcds/Rally-Client/releases">Todas las versiones</a>.</p>
+        <p class="file">El instalador aún no está firmado: si Windows dice «protegió su PC», pulsa Más información y Ejecutar de todas formas. Baja solo el <code>.exe</code>, y solo de este repositorio.</p>
+      </div>
+      <div class="faq" style="margin-top:-16px">
+        <details><summary>¿Qué datos envía Rally?</summary><p>Ninguno. No tiene servidores. Solo se conecta a haxball.com y a GitHub para buscar actualizaciones.</p></details>
+        <details><summary>¿Dónde se guardan los replays?</summary><p>En <code>%APPDATA%\RallyClient\Replays</code>. Ajustes, pestaña Replays, tiene un botón para abrir la carpeta.</p></details>
+        <details><summary>¿Y si HaxBall se actualiza?</summary><p>Las funciones que modifican el juego se apagan solas y el juego sigue normal hasta que salga una versión nueva de Rally.</p></details>
+        <details><summary>¿Hay que actualizar siempre?</summary><p>Cada versión tiene un plazo de unos días. Después hay que actualizar para seguir jugando.</p></details>
+        <details><summary>¿Linux o Mac?</summary><p>Por ahora solo Windows.</p></details>
+        <details><summary>Un problema o una idea</summary><p>Abre un <a href="https://github.com/bygcds/Rally-Client/issues">issue</a> con tu versión de Rally (Ajustes, Varios, Acerca de).</p></details>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot-top">
-      <a class="brand" href="#top" aria-label="Rally"><img src="assets/logo.png" alt="" width="30" height="30">Rally</a>
-      <nav class="foot-links" aria-label="GitHub">
-        <a href="https://github.com/bygcds/Rally-Client/releases/latest" data-i18n="foot.rel">Releases</a>
-        <a href="https://github.com/bygcds/Rally-Client/issues" data-i18n="foot.issues">Reportar un problema</a>
-        <a href="https://github.com/bygcds/Rally-Client" data-i18n="foot.repo">Repositorio</a>
-      </nav>
-    </div>
-    <p class="disclaimer" data-i18n="foot.disc">Rally no está afiliado ni respaldado por HaxBall ni por su autor. HaxBall es de sus respectivos dueños. Rally carga el juego oficial desde haxball.com y no incluye ni redistribuye su código.</p>
-    <p>© bygcds. <span data-i18n="foot.rights">Todos los derechos reservados.</span></p>
-  </div>
-</footer>
-
+<footer><div class="wrap">
+  <div class="links"><a href="https://github.com/bygcds/Rally-Client/releases/latest">Releases</a><a href="https://github.com/bygcds/Rally-Client/issues">Reportar un problema</a><a href="https://github.com/bygcds/Rally-Client">Repositorio</a></div>
+  <p>Rally no está afiliado ni respaldado por HaxBall ni por su autor. Carga el juego oficial desde haxball.com y no incluye ni redistribuye su código.</p>
+  <p>© bygcds. Todos los derechos reservados.</p>
+</div></footer>
 <script src="app.js" defer></script>
 </body>
 </html>
