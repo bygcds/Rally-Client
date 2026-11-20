@@ -1,6 +1,104 @@
 {
   "versions": [
     {
+      "version": "0.1.26",
+      "title": {
+        "es": "Tema y marcador Clásico, cancha opcional y arreglo del teclado",
+        "en": "Classic theme and scoreboard, optional pitch and a keyboard fix",
+        "pt": "Tema e placar Clássico, campo opcional e correção do teclado"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Nuevo tema «Clásico» (Ajustes → Interfaz → Tema): el HaxBall de siempre, con todos los botones y funciones de Rally.",
+            "en": "New “Classic” theme (Settings → Interface → Theme): the HaxBall you know, with all of Rally’s buttons and features.",
+            "pt": "Novo tema «Clássico» (Ajustes → Interface → Tema): o HaxBall de sempre, com todos os botões e funções do Rally."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Nuevo marcador «HaxBall clásico» (Ajustes → Marcador): la barra original, con los recuadros rojo y azul.",
+            "en": "New “Classic HaxBall” scoreboard (Settings → Scoreboard): the original bar, with the red and blue squares.",
+            "pt": "Novo placar «HaxBall clássico» (Ajustes → Placar): a barra original, com os quadrados vermelho e azul."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "La lista de marcadores ahora está ordenada por prioridad: Predeterminado, HaxBall clásico, Mundiales del más reciente al más antiguo, competencias de selecciones, competencias continentales y ligas, con Premier League primero.",
+            "en": "The scoreboard list is now ordered by priority: Default, Classic HaxBall, World Cups from newest to oldest, national-team competitions, continental competitions and leagues, with the Premier League first.",
+            "pt": "A lista de placares agora está ordenada por prioridade: Padrão, HaxBall clássico, Copas do Mundo da mais recente à mais antiga, competições de seleções, competições continentais e ligas, com a Premier League em primeiro."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "El fondo de cancha animado ahora es opcional y viene apagado, porque gastaba FPS. Actívalo en Ajustes → Interfaz.",
+            "en": "The animated pitch background is now optional and off by default, since it cost FPS. Turn it on in Settings → Interface.",
+            "pt": "O fundo de campo animado agora é opcional e vem desligado, porque gastava FPS. Ative em Ajustes → Interface."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Nueva opción «Fondo en la sala parada»: apágala para quitar la cancha cuando la partida está detenida.",
+            "en": "New “Background in a stopped room” option: turn it off to remove the pitch while the game is paused.",
+            "pt": "Nova opção «Fundo na sala parada»: desligue para tirar o campo quando a partida está parada."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Busca salas por país: escribe mx, dom, colombia o usa en el buscador y salen las salas de ese país, más las que lo tengan en el nombre.",
+            "en": "Search rooms by country: type mx, dom, colombia or usa in the search box and you get that country’s rooms, plus any with it in the name.",
+            "pt": "Busque salas por país: digite mx, dom, colômbia ou usa no buscador e aparecem as salas desse país, mais as que o tenham no nome."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Discord: si apagas «Mostrar actividad», las demás opciones se bloquean y recuperan su valor al volver a encenderla.",
+            "en": "Discord: if you turn off “Show activity”, the other options are locked and get their value back when you turn it on again.",
+            "pt": "Discord: se você desligar «Mostrar atividade», as outras opções ficam bloqueadas e recuperam o valor quando você ligar de novo."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Al cerrar los Ajustes de Rally o pulsar un botón de la cabecera durante una sala, el teclado dejaba de responder en el juego. Ya no pasa.",
+            "en": "After closing Rally’s Settings or pressing a header button during a room, the keyboard stopped working in the game. Fixed.",
+            "pt": "Ao fechar os Ajustes do Rally ou apertar um botão do cabeçalho durante uma sala, o teclado parava de responder no jogo. Corrigido."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Con el clic del mouse asignado a Chutar, hacer clic en la pantalla ya recupera el teclado.",
+            "en": "With the mouse click assigned to Kick, clicking on the screen now gets the keyboard back.",
+            "pt": "Com o clique do mouse atribuído a Chutar, clicar na tela já recupera o teclado."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "El buscador ahora encuentra salas aunque sus nombres usen letras estilizadas, emojis o símbolos.",
+            "en": "The search now finds rooms even when their names use stylized letters, emojis or symbols.",
+            "pt": "O buscador agora encontra salas mesmo quando seus nomes usam letras estilizadas, emojis ou símbolos."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Primera vez que abres Rally: ahora se ve la intro antes del selector de idioma (antes lo tapaba y los botones no respondían), y la guía de bienvenida sale al llegar a la lista de salas, después de poner tu nick.",
+            "en": "First time you open Rally: the intro now shows before the language picker (it used to cover it and the buttons did not respond), and the welcome guide appears when you reach the room list, after choosing your nick.",
+            "pt": "Primeira vez que você abre o Rally: agora a intro aparece antes do seletor de idioma (antes ele a cobria e os botões não respondiam), e o guia de boas-vindas aparece ao chegar na lista de salas, depois de escolher seu nick."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.25",
       "title": {
         "es": "Mouse como tecla y salas recientes",
