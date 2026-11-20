@@ -11,17 +11,33 @@
         {
           "type": "new",
           "text": {
-            "es": "Cinco marcadores nuevos: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League y Mundial 2026, con las líneas de color de uniforme de cada equipo.",
-            "en": "Five new scoreboards: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League and World Cup 2026, with each team's kit color lines.",
-            "pt": "Cinco novos placares: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League e Copa do Mundo 2026, com as linhas de cor do uniforme de cada equipe."
+            "es": "Minimapa (Ajustes → HUD → Minimapa): el estadio entero en pequeño con el balón y los jugadores, útil en mapas grandes. Elige cuándo verlo (solo en mapas grandes o siempre), el lugar, el tamaño, la opacidad y si los jugadores usan el color de su uniforme.",
+            "en": "Minimap (Settings → HUD → Minimap): the whole stadium in miniature with the ball and the players, handy on big maps. Choose when to see it (big maps only or always), its place, size, opacity and whether players use their kit color.",
+            "pt": "Minimapa (Ajustes → HUD → Minimapa): o estádio inteiro em miniatura com a bola e os jogadores, útil em mapas grandes. Escolha quando vê-lo (só em mapas grandes ou sempre), o lugar, o tamanho, a opacidade e se os jogadores usam a cor do uniforme."
           }
         },
         {
           "type": "new",
           "text": {
-            "es": "Banderas en el marcador del Mundial 2026: escribe el código del país en Ajustes → Marcador (ESP, ARG, FRA, GER, ENG...) y aparece su bandera. Sin código de país no se muestra ninguna.",
-            "en": "Flags on the World Cup 2026 scoreboard: type the country code in Settings → Scoreboard (ESP, ARG, FRA, GER, ENG...) and its flag shows up. With no country code no flag is shown.",
-            "pt": "Bandeiras no placar da Copa do Mundo 2026: digite o código do país em Ajustes → Placar (ESP, ARG, FRA, GER, ENG...) e a bandeira aparece. Sem código de país nenhuma bandeira é mostrada."
+            "es": "Ocho marcadores nuevos: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League, Mundial EE. UU. 2026, Mundial Brasil 2014, Mundial Qatar 2022 y Mundial Sudáfrica 2010. Los cinco primeros con las líneas de color de uniforme de cada equipo; los tres Mundiales con banderas (EE. UU. 2026, Brasil 2014 y Qatar 2022) llevan las de los dos países. El de Sudáfrica 2010 es el estilo clásico de aquella transmisión: solo la abreviatura de cada equipo, sin banderas, logos ni colores.",
+            "en": "Eight new scoreboards: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League, World Cup USA 2026, World Cup Brazil 2014, World Cup Qatar 2022 and World Cup South Africa 2010. The first five have each team's kit color lines; the flag-based World Cups (USA 2026, Brazil 2014 and Qatar 2022) show both countries' flags. South Africa 2010 recreates that broadcast's classic look: just each team's abbreviation, with no flags, logos or colors.",
+            "pt": "Oito novos placares: Ligue 1, Liga Profesional (Argentina), MLS, UEFA Nations League, Copa do Mundo EUA 2026, Copa do Mundo Brasil 2014, Copa do Mundo Qatar 2022 e Copa do Mundo África do Sul 2010. Os cinco primeiros com as linhas de cor do uniforme de cada equipe; as Copas com bandeiras (EUA 2026, Brasil 2014 e Qatar 2022) mostram as dos dois países. O da África do Sul 2010 é o estilo clássico daquela transmissão: só a abreviação de cada equipe, sem bandeiras, logos nem cores."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Banderas en los marcadores del Mundial EE. UU. 2026, el Mundial Brasil 2014 y el Mundial Qatar 2022: escribe el código del país en Ajustes → HUD → Marcador (ESP, ARG, FRA, GER, ENG...) y aparece su bandera. Sin código de país, el Mundial EE. UU. 2026 no muestra ninguna y los otros dos ponen una al azar.",
+            "en": "Flags on the World Cup USA 2026, World Cup Brazil 2014 and World Cup Qatar 2022 scoreboards: type the country code in Settings → HUD → Scoreboard (ESP, ARG, FRA, GER, ENG...) and its flag shows up. With no country code, World Cup USA 2026 shows none and the other two pick a random one.",
+            "pt": "Bandeiras nos placares das Copas do Mundo EUA 2026, Brasil 2014 e Qatar 2022: digite o código do país em Ajustes → HUD → Placar (ESP, ARG, FRA, GER, ENG...) e a bandeira aparece. Sem código de país, a dos EUA 2026 não mostra nenhuma e as outras duas sorteiam uma."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Ajustes más simples: Marcador, Minimapa y Teclas ahora son una sola página, HUD, con una única vista previa de la pantalla donde se ven los tres a la vez. Toca uno en la pantalla (o elígelo abajo) para ajustarlo. Lo que ya tenías configurado se mantiene.",
+            "en": "Simpler Settings: Scoreboard, Minimap and Keys are now a single page, HUD, with one screen preview that shows all three at once. Tap one on the screen (or pick it below) to adjust it. Your existing settings are kept.",
+            "pt": "Ajustes mais simples: Placar, Minimapa e Teclas agora são uma única página, HUD, com uma só pré-visualização da tela mostrando os três ao mesmo tempo. Toque em um na tela (ou escolha abaixo) para ajustá-lo. O que você já configurou é mantido."
           }
         },
         {
@@ -30,6 +46,30 @@
             "es": "La lista de marcadores en Ajustes ahora se ve en 2 columnas, con 2 marcadores por fila.",
             "en": "The scoreboard list in Settings now shows 2 columns, with 2 scoreboards per row.",
             "pt": "A lista de placares em Ajustes agora aparece em 2 colunas, com 2 placares por linha."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Salas recientes: arriba de la lista de salas salen las últimas salas en las que jugaste, con jugadores y distancia de ahora si siguen abiertas. Solo cuentan las salas públicas de la lista y las de MrHost; las que abres con un link nunca se guardan. Elige cuántas ver (de 0 a 5, por defecto 3) en Ajustes → Interfaz; con «Limpiar» borras el historial.",
+            "en": "Recent rooms: the last rooms you played in now show above the room list, with live players and distance if they are still open. Only public rooms from the list and MrHost count; rooms you open with a link are never saved. Choose how many to show (0 to 5, 3 by default) in Settings → Interface; “Clear” wipes the history.",
+            "pt": "Salas recentes: acima da lista de salas aparecem as últimas salas em que você jogou, com jogadores e distância de agora se ainda estiverem abertas. Só contam as salas públicas da lista e as do MrHost; as que você abre com um link nunca são salvas. Escolha quantas ver (de 0 a 5, padrão 3) em Ajustes → Interface; com «Limpar» você apaga o histórico."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Modo streamer (Ajustes → Streamer): protege lo que se ve en tu directo. Difumina el enlace de la sala, escribe las contraseñas como puntos, esconde tu clave de identidad, difumina el nombre de tu sala y de las recientes (se ven al pasar el ratón) y, si quieres, el chat. Actívalo a mano, con un atajo de teclado o que se encienda solo al abrir OBS, Streamlabs, Twitch Studio, XSplit o vMix (solo Windows).",
+            "en": "Streamer mode (Settings → Streamer): protects what shows on your stream. It blurs the room link, shows passwords as dots, hides your identity key, blurs the name of your room and of recent ones (hover to see them) and, if you want, the chat. Turn it on by hand, with a keyboard shortcut, or let it switch on by itself when OBS, Streamlabs, Twitch Studio, XSplit or vMix opens (Windows only).",
+            "pt": "Modo streamer (Ajustes → Streamer): protege o que aparece na sua live. Desfoca o link da sala, mostra as senhas como pontos, esconde sua chave de identidade, desfoca o nome da sua sala e das recentes (aparecem ao passar o mouse) e, se quiser, o chat. Ative à mão, com um atalho de teclado ou deixe ligar sozinho ao abrir OBS, Streamlabs, Twitch Studio, XSplit ou vMix (só Windows)."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Discord en Modo streamer: elige entre normal, privado (sin nombre de sala y sin el botón «Unirse», que regala el link a todos tus seguidores) o apagado mientras dura el modo.",
+            "en": "Discord in Streamer mode: choose normal, private (no room name and no “Join” button, which hands the link to all your followers) or off while the mode lasts.",
+            "pt": "Discord no Modo streamer: escolha entre normal, privado (sem nome da sala e sem o botão «Entrar», que dá o link a todos os seus seguidores) ou desligado enquanto o modo estiver ativo."
           }
         }
       ]
