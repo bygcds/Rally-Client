@@ -1,6 +1,96 @@
 {
   "versions": [
     {
+      "version": "0.1.25",
+      "title": {
+        "es": "Mouse como tecla y salas recientes",
+        "en": "Mouse as a key and recent rooms",
+        "pt": "Mouse como tecla e salas recentes"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Intro de arranque: al abrir Rally, una cancha de noche cobra vida: se encienden los reflectores, se dibujan las líneas, la grada destella y aparece el logo. Dura unos 6 segundos, va antes del selector de nickname y no se puede saltar. Por ahora, es solo un instante… pero algunas ideas nacen para quedarse.",
+            "en": "Startup intro: when you open Rally, a night pitch comes to life: floodlights switch on, the lines draw themselves, the stands shimmer and the logo appears. It lasts about 6 seconds, plays before the nickname picker and can't be skipped. For now, it's just a glimpse… but some ideas are meant to stay.",
+            "pt": "Intro de abertura: ao abrir o Rally, um campo à noite ganha vida: os refletores se acendem, as linhas se desenham, a arquibancada brilha e o logo aparece. Dura cerca de 6 segundos, vem antes do seletor de nickname e não dá para pular. Por enquanto, é só um instante… mas algumas ideias nascem para ficar."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Editor del HUD: en Ajustes → HUD pulsa «Abrir editor» y se abre una pantalla del tamaño real de tu juego (con un campo de fondo y el logo de Rally) donde arrastras el marcador, el minimapa y las teclas a cualquier lugar y estiras la esquina de cada uno para cambiar su tamaño. Hay imán al centro, flechas para afinar (Mayús = más rápido) y todo se ve en vivo en el juego. Cada elemento puede volver a su posición automática cuando quieras.",
+            "en": "HUD editor: in Settings → HUD press “Open editor” and a screen at your game's real size opens (with a pitch background and the Rally logo) where you drag the scoreboard, the minimap and the keys anywhere and pull each one's corner to resize it. There is center snapping, arrow keys to fine-tune (Shift = faster) and everything updates live in the game. Each element can go back to its automatic position at any time.",
+            "pt": "Editor do HUD: em Ajustes → HUD toque em «Abrir editor» e abre uma tela do tamanho real do seu jogo (com um campo de fundo e o logo da Rally) onde você arrasta o placar, o minimapa e as teclas para qualquer lugar e puxa o canto de cada um para mudar o tamanho. Há ímã no centro, setas para ajustar (Shift = mais rápido) e tudo aparece ao vivo no jogo. Cada elemento pode voltar à posição automática quando quiser."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Ahora puedes usar el mouse para jugar: en Ajustes → Controles pulsa «+» en una acción (por ejemplo Chutar) y haz clic con el botón que quieras: izquierdo, derecho, central o los laterales (atrás y adelante). Funciona como una tecla más y se puede combinar con el teclado.",
+            "en": "You can now use the mouse to play: in Settings → Controls press «+» on an action (for example Kick) and click with the button you want: left, right, middle or the side buttons (back and forward). It works like any other key and can be combined with the keyboard.",
+            "pt": "Agora você pode jogar com o mouse: em Ajustes → Controles toque em «+» numa ação (por exemplo Chutar) e clique com o botão que quiser: esquerdo, direito, do meio ou os laterais (voltar e avançar). Funciona como mais uma tecla e pode ser combinado com o teclado."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Los controles asignados al mouse se muestran con su nombre («Clic derecho», «Clic izquierdo»…) y el aviso de asignar tecla ahora dice que también acepta un botón del mouse.",
+            "en": "Controls assigned to the mouse show their name (“Right click”, “Left click”…) and the assign-key prompt now says it also accepts a mouse button.",
+            "pt": "Os controles atribuídos ao mouse aparecem com o nome («Clique direito», «Clique esquerdo»…) e o aviso de atribuir tecla agora diz que também aceita um botão do mouse."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Salas recientes: ya no se mezclan ni te llevan a otra sala. Si tenías recientes de antes, borralas con «Limpiar» una vez.",
+            "en": "Recent rooms: they no longer get mixed up or take you to a different room. If you have old ones, clear them once with “Clear”.",
+            "pt": "Salas recentes: não se misturam mais nem te levam a outra sala. Se você tinha recentes antigas, apague uma vez com «Limpar»."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Cambiar el idioma ya no te mete solo en una sala.",
+            "en": "Changing the language no longer drops you into a room on its own.",
+            "pt": "Mudar o idioma não te coloca mais sozinho numa sala."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Algunas salas no se guardaban bien en «volver a la última sala» ni en Discord.",
+            "en": "Some rooms weren't saved properly for “back to last room” or on Discord.",
+            "pt": "Algumas salas não eram guardadas direito em «voltar à última sala» nem no Discord."
+          }
+        },
+        {
+          "type": "fixed",
+          "text": {
+            "es": "Marcador del Mundial 2026: los números ya no se mueven hacia arriba después de un gol o al empezar la partida.",
+            "en": "World Cup 2026 scoreboard: the numbers no longer shift up after a goal or when a match starts.",
+            "pt": "Placar da Copa do Mundo 2026: os números não sobem mais depois de um gol ou ao começar a partida."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Ahora puedes quitar una sala de recientes con la ×.",
+            "en": "You can now remove a room from recent with the ×.",
+            "pt": "Agora você pode tirar uma sala das recentes com o ×."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Tema GTA 6: la lista de equipos de la sala ahora se ve más limpia, igual que en el tema Rally.",
+            "en": "GTA 6 theme: the room's team lists now look cleaner, like in the Rally theme.",
+            "pt": "Tema GTA 6: a lista de equipes da sala agora fica mais limpa, como no tema Rally."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.24",
       "title": {
         "es": "Más marcadores",
