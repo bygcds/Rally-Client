@@ -1,6 +1,80 @@
 {
   "versions": [
     {
+      "version": "0.1.27",
+      "title": {
+        "es": "Versión para Linux y intro que se puede saltar",
+        "en": "Linux version and a skippable intro",
+        "pt": "Versão para Linux e intro que pode ser pulada"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Modo sandbox: en «Crear sala» hay un botón nuevo para abrir una sala solo para ti, sin internet y sin aparecer en la lista de HaxBall. Es la misma sala de siempre (mismo juego, mismos controles y menú), ideal para practicar un rato. Nadie más puede entrar: no tiene enlace.",
+            "en": "Sandbox mode: «Create room» has a new button to open a room just for you, with no internet and not listed on HaxBall. It's the same room as always (same game, same controls and menu), great for some practice. Nobody else can join: it has no link.",
+            "pt": "Modo sandbox: em «Criar sala» há um botão novo para abrir uma sala só para você, sem internet e fora da lista do HaxBall. É a mesma sala de sempre (mesmo jogo, mesmos controles e menu), ótima para praticar. Ninguém mais pode entrar: ela não tem link."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Rally ahora abre sin internet. La primera vez que lo abres con conexión guarda solo el juego en tu equipo (no viene en el instalador) y se renueva sola cada día. Sin conexión, la lista de salas queda vacía y las actualizaciones esperan, pero el modo sandbox funciona igual. Al volver el internet, reinicia Rally para reconectarte.",
+            "en": "Rally now opens without internet. The first time you open it online it saves just the game on your computer (it isn't in the installer) and refreshes itself daily. Offline, the room list is empty and updates wait, but sandbox mode works the same. When internet is back, restart Rally to reconnect.",
+            "pt": "O Rally agora abre sem internet. Na primeira vez que você o abre com conexão, ele salva só o jogo no seu computador (não vem no instalador) e se renova sozinho todo dia. Sem conexão, a lista de salas fica vazia e as atualizações esperam, mas o modo sandbox funciona igual. Quando a internet voltar, reinicie o Rally para reconectar."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Discord: en una sala sandbox se muestra «Practicando en modo sandbox», sin nombre de sala, marcador ni botón de Unirse.",
+            "en": "Discord: in a sandbox room it shows «Practicing in sandbox mode», with no room name, score or Join button.",
+            "pt": "Discord: em uma sala sandbox aparece «Praticando no modo sandbox», sem nome de sala, placar nem botão de Entrar."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Rally ya tiene versión para Linux (AppImage), con las mismas funciones y el mismo código que la de Windows. Se actualiza sola, igual que en Windows.",
+            "en": "Rally now has a Linux version (AppImage), with the same features and the same code as the Windows one. It updates itself, just like on Windows.",
+            "pt": "O Rally agora tem versão para Linux (AppImage), com as mesmas funções e o mesmo código da de Windows. Ele se atualiza sozinho, como no Windows."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "La intro de arranque ahora se puede saltar con una tecla o un clic. Solo se ve completa la primera vez que abres Rally tras instalarlo y tras cada actualización.",
+            "en": "The startup intro can now be skipped with a key press or a click. You only get the full intro the first time you open Rally after installing it and after each update.",
+            "pt": "A intro de abertura agora pode ser pulada com uma tecla ou um clique. Ela só passa completa na primeira vez que você abre o Rally depois de instalar e depois de cada atualização."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Modo streamer: en Linux la detección automática también reconoce OBS.",
+            "en": "Streamer mode: on Linux, automatic detection also recognizes OBS.",
+            "pt": "Modo streamer: no Linux, a detecção automática também reconhece o OBS."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Lado fijo: juega siempre desde el mismo lado, sin importar tu equipo. En Ajustes → Lado fijo eliges Izquierda (rojo) o Derecha (azul). Si tu equipo es el contrario, el campo se refleja como un espejo, se intercambian izquierda/derecha de tus teclas y el marcador y la lista de jugadores de la sala también se reflejan; nombres, avatares y uniformes se ven igual. Solo lo ves tú.",
+            "en": "Fixed side: always play from the same side, whatever your team. In Settings → Fixed side you pick Left (red) or Right (blue). If your team is the opposite one, the field is mirrored like in a mirror, your left/right keys are swapped, and the scoreboard and the room player list are mirrored too; names, avatars and kits look the same. Only you see it.",
+            "pt": "Lado fixo: jogue sempre do mesmo lado, seja qual for o seu time. Em Ajustes → Lado fixo você escolhe Esquerda (vermelho) ou Direita (azul). Se o seu time for o oposto, o campo é espelhado, as teclas esquerda/direita são trocadas e o placar e a lista de jogadores da sala também são espelhados; nomes, avatares e uniformes continuam iguais. Só você vê."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Minimapa rediseñado: marco con relieve, césped con tinte y líneas más claras para que se note dónde termina el campo. En las salas de Real Soccer (campos grandes) ahora muestra césped con franjas, la zona de fuera del campo y un aro que late donde el balón sale para un saque de banda, de esquina o de portero.",
+            "en": "Redesigned minimap: embossed frame, tinted grass and brighter lines so the edges of the pitch are easy to see. In Real Soccer rooms (big pitches) it now shows striped grass, the area outside the lines, and a pulsing ring where the ball went out for a throw-in, corner or goal kick.",
+            "pt": "Minimapa redesenhado: moldura com relevo, grama com tom e linhas mais claras para ver onde o campo termina. Nas salas de Real Soccer (campos grandes) agora mostra grama listrada, a área fora das linhas e um anel pulsante onde a bola saiu para lateral, escanteio ou tiro de meta."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.26",
       "title": {
         "es": "Tema y marcador Clásico, cancha opcional y arreglo del teclado",
