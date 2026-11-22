@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rally, cliente no oficial de HaxBall para Windows y Linux</title>
 <meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows y Linux. FPS sin tope, replays automáticos, estadísticas, minimapa, sala sandbox y 20 marcadores.">
-<meta name="theme-color" content="#1d1f21">
+<meta name="theme-color" content="#0b0c0e">
 <meta property="og:title" content="Rally, cliente no oficial de HaxBall">
 <meta property="og:description" content="FPS sin tope, replays automáticos, estadísticas, minimapa y 20 marcadores. Para Windows y Linux.">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -57,7 +57,7 @@
   <div class="wrap">
     <h2>Salas</h2>
     <div class="split wide-l">
-      <figure class="slot" style="margin:0"><img src="assets/shots/lista-salas.png" alt="Lista de salas de Rally con las salas de MrHost" width="1260" height="820" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/lista-salas.png</code></div></div></figure>
+      <figure class="slot glow-blue" style="margin:0"><img src="assets/shots/lista-salas.png" alt="Lista de salas de Rally con las salas de MrHost" width="1260" height="820" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/lista-salas.png</code></div></div></figure>
       <ul class="list" style="margin-top:0">
         <li>El botón de MrHost lista sus salas y entras directo, sin buscar el link.</li>
         <li>Arriba de la lista salen tus últimas salas, con jugadores y distancia si siguen abiertas. Tú decides cuántas ver, de 0 a 5.</li>
@@ -76,7 +76,7 @@
         <h3 style="margin-top:28px">Sin conexión</h3>
         <p style="color:var(--soft);margin-top:8px">Rally abre aunque no haya internet. La primera vez que lo abres con conexión guarda el juego en tu equipo (no viene dentro del instalador) y lo renueva cada día. Sin conexión la lista de salas queda vacía y las actualizaciones esperan, pero el sandbox funciona igual. Cuando vuelva el internet, reinicia Rally para reconectarte.</p>
       </div>
-      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/sandbox.png" alt="Sala sandbox de Rally, abierta sin internet" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El botón de sandbox en «Crear sala», o una sala sandbox en marcha.<br><code>assets/shots/sandbox.png</code></div></div></figure>
+      <figure class="slot glow-red" style="margin:0;--r:16/10"><img src="assets/shots/sandbox.png" alt="Sala sandbox de Rally, abierta sin internet" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El botón de sandbox en «Crear sala», o una sala sandbox en marcha.<br><code>assets/shots/sandbox.png</code></div></div></figure>
     </div>
   </div>
 </section>
@@ -85,23 +85,31 @@
 <section id="partida">
   <div class="wrap">
     <h2>En la partida</h2>
-    <div class="split">
+    <p class="intro">Los comandos se escriben en el chat. Los resuelve Rally en tu PC y no llegan a la sala.</p>
+    <dl class="cmds two" style="margin-top:36px">
+      <dt><code>/fps</code></dt><dd>Medidor de FPS y de latencia de tecla. <code>/fps 144</code> pone un tope, <code>/fps auto</code> usa el doble de los Hz de tu monitor y <code>/fps 0</code> lo quita.</dd>
+      <dt><code>/net</code></dt><dd>Ping, jitter y pérdida.</dd>
+      <dt><code>/stats</code></dt><dd>Tus goles, asistencias y horas.</dd>
+      <dt><code>/gif 1 2 3</code></dt><dd>Avatar animado.</dd>
+      <dt><code>/fakeping 67</code></dt><dd>El ping que ven los demás. El tuyo sigue real.</dd>
+      <dt><code>!bb</code></dt><dd>Sales de la sala al instante.</dd>
+      <dt><code>/autorec</code></dt><dd>Graba cada partida, on u off.</dd>
+      <dt><code>/glass</code></dt><dd>Panel de la sala translúcido.</dd>
+    </dl>
+
+    <div class="split wide-l sub-h">
+      <figure class="slot glow-red" style="margin:0;--r:4/3"><img src="assets/shots/rendimiento.webp" alt="Ajustes de Rally, pestaña Rendimiento" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/rendimiento.webp</code></div></div></figure>
       <div>
-        <p class="intro" style="margin:0 0 8px">Los comandos se escriben en el chat. Los resuelve Rally en tu PC y no llegan a la sala.</p>
-        <dl class="cmds">
-          <dt><code>/fps</code></dt><dd>Medidor de FPS y de latencia de tecla. <code>/fps 144</code> pone un tope, <code>/fps auto</code> usa el doble de los Hz de tu monitor y <code>/fps 0</code> lo quita.</dd>
-          <dt><code>/net</code></dt><dd>Ping, jitter y pérdida.</dd>
-          <dt><code>/stats</code></dt><dd>Tus goles, asistencias y horas.</dd>
-          <dt><code>/gif 1 2 3</code></dt><dd>Avatar animado.</dd>
-          <dt><code>/fakeping 67</code></dt><dd>El ping que ven los demás. El tuyo sigue real.</dd>
-          <dt><code>!bb</code></dt><dd>Sales de la sala al instante.</dd>
-          <dt><code>/autorec</code></dt><dd>Graba cada partida, on u off.</dd>
-          <dt><code>/glass</code></dt><dd>Panel de la sala translúcido.</dd>
-        </dl>
+        <h3>FPS</h3>
+        <p style="color:var(--soft);margin-top:8px">Tres modos: normal, sin límite y sin vsync. Cambiar de modo pide reiniciar.</p>
+        <p style="color:var(--soft);margin-top:8px">El tope se cambia al instante, a mano o en automático: el doble de los Hz de tu monitor. También puedes ver el medidor de FPS y el de ping en pantalla.</p>
       </div>
+    </div>
+
+    <div class="split wide-r sub-h">
       <div>
         <h3>Atajos</h3>
-        <p class="where" style="margin:6px 0 0">No actúan mientras escribes en el chat. Tú eliges las teclas.</p>
+        <p class="where" style="margin:8px 0 0">No actúan mientras escribes en el chat. Tú eliges las teclas.</p>
         <table class="keys"><tbody>
           <tr><th>Captura de la ventana</th><td>F9 por defecto</td></tr>
           <tr><th>Marcador</th><td>Mostrar u ocultar</td></tr>
@@ -112,31 +120,23 @@
           <tr><th>Salir de la sala</th><td>Como <code>!bb</code></td></tr>
           <tr><th>Pantalla completa</th><td>F11</td></tr>
         </tbody></table>
-        <figure class="slot" style="margin:24px 0 0;--r:4/3"><img src="assets/shots/atajos.png" alt="Ajustes de Rally, pestaña Atajos" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Atajos, con teclas asignadas.<br><code>assets/shots/atajos.png</code></div></div></figure>
       </div>
+      <figure class="slot glow-blue" style="margin:0;--r:4/3"><img src="assets/shots/atajos.webp" alt="Ajustes de Rally, pestaña Atajos" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/atajos.webp</code></div></div></figure>
     </div>
 
-    <div class="split wide-r" style="margin-top:56px">
+    <div class="split wide-l sub-h">
+      <figure class="slot glow-pink" style="margin:0;--r:16/9"><img src="assets/shots/minimapa.webp" alt="Minimapa de Rally con el campo grande de Real Soccer" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/minimapa.webp</code></div></div></figure>
       <div>
-        <h3>FPS</h3>
-        <p style="color:var(--soft);margin-top:8px">Tres modos: normal, sin límite y sin vsync. Cambiar de modo pide reiniciar. El tope se cambia al instante, a mano o en automático.</p>
-        <h3 style="margin-top:28px">Teclas en pantalla</h3>
-        <p style="color:var(--soft);margin-top:8px">WASD o flechas y la patada, en la esquina que quieras. Experimental.</p>
-        <h3 style="margin-top:28px">Mouse como tecla</h3>
-        <p style="color:var(--soft);margin-top:8px">En Ajustes, Controles, pulsa «+» junto a una acción y haz clic con el botón que quieras: izquierdo, derecho, central o los laterales. Se puede combinar con el teclado.</p>
-        <h3 style="margin-top:28px">Estadísticas</h3>
-        <p style="color:var(--soft);margin-top:8px">Cada gol tuyo saca tu total en el chat. Solo cuentan partidas de verdad, y se guardan en tu PC.</p>
+        <h3>Minimapa</h3>
+        <p style="color:var(--soft);margin-top:8px">El estadio entero en pequeño, con el balón y los jugadores. Se nota sobre todo en mapas grandes. Eliges si sale siempre o solo en mapas grandes, dónde va, el tamaño, la opacidad y si los jugadores usan el color de su uniforme.</p>
+        <p style="color:var(--soft);margin-top:8px">En las salas de Real Soccer muestra el césped con franjas, la zona de fuera y un aro que late donde el balón sale para un saque.</p>
       </div>
-      <figure class="slot" style="margin:0;--r:4/3"><img src="assets/shots/rendimiento.png" alt="Ajustes de Rally, pestaña Rendimiento" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/rendimiento.png</code></div></div></figure>
     </div>
 
-    <div class="split sub-h">
-      <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/sala.png" alt="Una partida en Rally con marcador, teclas y medidor de red" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Una partida con marcador, teclas en pantalla y medidor de red a la vista.<br><code>assets/shots/sala.png</code></div></div></figure>
-      <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/minimapa.png" alt="Minimapa de Rally en una sala con un campo grande" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El minimapa en una sala de campo grande (Real Soccer).<br><code>assets/shots/minimapa.png</code></div></div></figure>
-    </div>
-    <div style="max-width:70ch;margin-top:36px">
-      <h3>Minimapa</h3>
-      <p style="color:var(--soft);margin-top:8px">El estadio entero en pequeño, con el balón y los jugadores. Se nota sobre todo en mapas grandes. Eliges si sale siempre o solo en mapas grandes, dónde va, el tamaño, la opacidad y si los jugadores usan el color de su uniforme. En las salas de Real Soccer muestra el césped con franjas, la zona de fuera y un aro que late donde el balón sale para un saque.</p>
+    <div class="mini">
+      <div><h3>Teclas en pantalla</h3><p style="color:var(--soft);margin-top:8px">WASD o flechas y la patada, en la esquina que quieras. Experimental.</p></div>
+      <div><h3>Mouse como tecla</h3><p style="color:var(--soft);margin-top:8px">En Ajustes, Controles, pulsa «+» junto a una acción y haz clic con el botón que quieras: izquierdo, derecho, central o los laterales. Se puede combinar con el teclado.</p></div>
+      <div><h3>Estadísticas</h3><p style="color:var(--soft);margin-top:8px">Cada gol tuyo saca tu total en el chat. Solo cuentan partidas de verdad, y se guardan en tu PC.</p></div>
     </div>
   </div>
 </section>
@@ -147,37 +147,30 @@
     <h2>Imagen</h2>
     <p class="intro">Todo esto lo ves solo tú. Los demás siguen viendo el HaxBall de siempre.</p>
     <div class="split wide-l">
-      <figure class="slot" style="margin:0"><img src="assets/shots/imagen.png" alt="Ajustes de Rally, pestaña Imagen" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/imagen.png</code></div></div></figure>
+      <figure class="slot glow-red" style="margin:0"><img src="assets/shots/imagen.webp" alt="Ajustes de Rally, pestaña Imagen" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/imagen.webp</code></div></div></figure>
       <dl class="cmds" style="margin:0">
         <dt>Balón</dt><dd>Del color que mejor veas.</dd>
         <dt>Resolución</dt><dd>Estirada a 4:3, 5:4 o la que escribas.</dd>
         <dt>Saturación</dt><dd>Del 50 al 200 %, sin filtros sobre la pantalla.</dd>
         <dt>Daltonismo</dt><dd>Protanopia, deuteranopia o tritanopia.</dd>
-        <dt>Lado fijo</dt><dd>Siempre ves el campo desde el mismo lado, seas rojo o azul.</dd>
-        <dt>Tema</dt><dd>Rally, GTA VI o Clásico.</dd>
-        <dt>Chat</dt><dd>Opacidad y tamaño de letra.</dd>
-        <dt>Cancha animada</dt><dd>Fondo opcional, viene apagado porque gasta FPS.</dd>
+        <dt>Lado fijo</dt><dd>Siempre ves el campo desde el mismo lado, seas rojo o azul (tiene su propia pestaña).</dd>
       </dl>
     </div>
 
-    <div class="split sub-h">
+    <div class="split wide-r sub-h">
       <div>
         <h3>Lado fijo</h3>
         <p style="color:var(--soft);margin-top:8px">Eliges Izquierda (rojo) o Derecha (azul). Si te toca el otro equipo, el campo se refleja como en un espejo, se intercambian la izquierda y la derecha de tus teclas, y el marcador y la lista de jugadores también se voltean. Los nombres, avatares y uniformes se ven igual.</p>
       </div>
+      <figure class="slot glow-blue" style="margin:0;--r:4/3"><img src="assets/shots/lado-fijo.webp" alt="Ajustes de Rally, pestaña Lado fijo" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/lado-fijo.webp</code></div></div></figure>
+    </div>
+    <div class="split wide-l sub-h">
+      <figure class="slot glow-pink" style="margin:0;--r:4/3"><img src="assets/shots/tema-gta6.webp" alt="Ajustes de Rally con el tema GTA VI" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/tema-gta6.webp</code></div></div></figure>
       <div>
-        <h3>Tema Clásico</h3>
-        <p style="color:var(--soft);margin-top:8px">El HaxBall de siempre, pero con todos los botones y funciones de Rally. Va bien con el marcador «HaxBall clásico».</p>
+        <h3>Temas</h3>
+        <p style="color:var(--soft);margin-top:8px">Se eligen en Ajustes, Interfaz: Rally, GTA VI (el de esta captura) o Clásico, el HaxBall de siempre con las funciones de Rally, que va bien con el marcador «HaxBall clásico».</p>
+        <p style="color:var(--soft);margin-top:8px">Ahí también están el panel translúcido, el fondo de cancha (viene apagado porque gasta FPS) y las salas recientes.</p>
       </div>
-    </div>
-
-    <div class="split" style="margin-top:44px">
-      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/daltonismo.png" alt="El mismo campo sin corrección y con el modo daltonismo" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El mismo campo sin corrección y con modo daltonismo.<br><code>assets/shots/daltonismo.png</code></div></div></figure>
-      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/tema-gta6.png" alt="Rally con el tema GTA VI" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>La lista de salas o la sala con el tema GTA VI.<br><code>assets/shots/tema-gta6.png</code></div></div></figure>
-    </div>
-    <div class="split" style="margin-top:28px">
-      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/lado-fijo.png" alt="El mismo momento de juego con y sin lado fijo" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El mismo momento con el campo normal y con el campo reflejado por el lado fijo.<br><code>assets/shots/lado-fijo.png</code></div></div></figure>
-      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/tema-clasico.png" alt="Rally con el tema Clásico" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>La lista de salas o una sala con el tema Clásico.<br><code>assets/shots/tema-clasico.png</code></div></div></figure>
     </div>
   </div>
 </section>
@@ -187,30 +180,30 @@
   <div class="wrap">
     <h2>20 marcadores</h2>
     <p class="intro">Cambias el marcador de HaxBall por el de una competición real. Solo lo ves tú.</p>
-    <div class="split wide-r" style="margin-bottom:36px">
-      <div>
-        <ul class="cols"><li>Predeterminado</li><li>HaxBall clásico</li><li>Champions League</li><li>Europa League</li><li>UEFA Nations League</li><li>Premier League</li><li>LaLiga</li><li>Serie A</li><li>Bundesliga</li><li>Ligue 1</li><li>MLS</li><li>Liga Profesional</li><li>Brasileirão</li><li>Copa Libertadores</li><li>Eurocopa 2024</li><li>Copa América 2024</li><li>Mundial EE. UU. 2026</li><li>Mundial Qatar 2022</li><li>Mundial Brasil 2014</li><li>Mundial Sudáfrica 2010</li></ul>
-      </div>
-      <ul class="list" style="margin-top:0">
-        <li>Seis posiciones y tamaño del 40 al 200 %.</li>
-        <li>Las líneas de color siguen el uniforme que ves en la sala.</li>
-        <li>Códigos de hasta 4 letras por equipo. En los Mundiales de 2026, 2022 y 2014, ESP o ARG ponen la bandera.</li>
-        <li>El de Sudáfrica 2010 es el de aquella transmisión: solo la abreviatura de cada equipo.</li>
-        <li>Un atajo de teclado lo oculta y lo muestra.</li>
-      </ul>
-    </div>
-    <figure class="slot" style="margin:0;--r:16/6"><img src="assets/shots/marcadores-20.png" alt="Los 20 marcadores de Rally, uno junto a otro" width="2000" height="750" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Los 20 marcadores en una sola imagen, en el orden de la lista de arriba.<br><code>assets/shots/marcadores-20.png</code></div></div></figure>
-    <div class="split" style="margin-top:28px">
-      <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-ajustes.png" alt="Ajustes de Rally, pestaña HUD, con la lista de marcadores" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña HUD, estilos en 2 columnas con vista previa.<br><code>assets/shots/marcador-ajustes.png</code></div></div></figure>
-      <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-mundial-banderas.png" alt="Marcador del Mundial 2026 con dos banderas" width="1600" height="1200" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Marcador del Mundial 2026 con dos banderas (por ejemplo ESP y ARG).<br><code>assets/shots/marcador-mundial-banderas.png</code></div></div></figure>
-    </div>
+    <figure class="slot glow-pink" style="margin:40px 0 0;--r:2/1"><img src="assets/shots/marcadores-20.webp" alt="Los 20 marcadores de Rally, cada uno con el nombre de su competición" width="2000" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/marcadores-20.webp</code></div></div></figure>
+    <ul class="cols" style="margin-top:32px">
+      <li>Seis posiciones y tamaño del 40 al 200 %.</li>
+      <li>Las líneas de color siguen el uniforme que ves en la sala.</li>
+      <li>Un atajo de teclado lo oculta y lo muestra.</li>
+      <li>Vienen ligas, copas, Eurocopa, Copa América y cuatro Mundiales.</li>
+    </ul>
 
     <div class="split wide-r sub-h">
       <div>
-        <h3>Editor del HUD</h3>
-        <p style="color:var(--soft);margin-top:8px">En Ajustes, HUD, pulsa «Abrir editor». Se abre una pantalla del tamaño real de tu juego y arrastras el marcador, el minimapa y las teclas adonde quieras. Estiras la esquina para cambiar el tamaño, hay imán al centro y flechas para afinar (con Mayús va más rápido). Cada pieza puede volver a su sitio automático cuando quieras.</p>
+        <h3>Banderas y códigos</h3>
+        <p style="color:var(--soft);margin-top:8px">Cada equipo admite un código de hasta 4 letras. En los Mundiales de 2026, 2022 y 2014, si escribes el de un país (ESP, ARG, FRA…) sale su bandera.</p>
+        <p style="color:var(--soft);margin-top:8px">El de Sudáfrica 2010 es el de aquella transmisión y solo lleva la abreviatura de cada equipo.</p>
       </div>
-      <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/editor-hud.png" alt="El editor del HUD de Rally con el marcador, el minimapa y las teclas" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El editor del HUD con marcador, minimapa y teclas colocados.<br><code>assets/shots/editor-hud.png</code></div></div></figure>
+      <figure class="slot glow-red" style="margin:0;--r:4/3"><img src="assets/shots/marcador-mundial-banderas.webp" alt="Marcadores de los Mundiales 2026, 2022 y 2014 con banderas" width="1600" height="1200" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/marcador-mundial-banderas.webp</code></div></div></figure>
+    </div>
+
+    <div class="split wide-l sub-h">
+      <figure class="slot glow-blue" style="margin:0;--r:16/9"><img src="assets/shots/editor-hud.webp" alt="Editor del HUD de Rally con el marcador, el minimapa y las teclas" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/editor-hud.webp</code></div></div></figure>
+      <div>
+        <h3>Editor del HUD</h3>
+        <p style="color:var(--soft);margin-top:8px">En Ajustes, HUD, pulsa «Abrir editor». Se abre una pantalla del tamaño real de tu juego y arrastras el marcador, el minimapa y las teclas adonde quieras.</p>
+        <p style="color:var(--soft);margin-top:8px">Estiras la esquina para cambiar el tamaño, hay imán al centro y flechas para afinar (con Mayús va más rápido). Cada pieza puede volver a su sitio automático cuando quieras.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -222,11 +215,11 @@
     <div class="split">
       <div>
         <p>Rally graba tus partidas solo, sin el diálogo «Guardar como». Los nombra con fecha, sala y marcador. Un doble clic en cualquier <code>.hbr2</code> lo abre en Rally.</p>
-        <figure class="slot" style="margin:22px 0 0"><img src="assets/shots/replays.png" alt="Ajustes de Rally, pestaña Replays" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/replays.png</code></div></div></figure>
+        <figure class="slot glow-red" style="margin:22px 0 0"><img src="assets/shots/replays.webp" alt="Ajustes de Rally, pestaña Replays" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/replays.webp</code></div></div></figure>
       </div>
       <div>
         <p>Uniformes propios con vista previa y biblioteca. Con un clic añades selecciones y clubes de ejemplo. Los ves solo tú.</p>
-        <figure class="slot" style="margin:22px 0 0"><img src="assets/shots/uniformes.png" alt="Ajustes de Rally, pestaña Uniformes" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/uniformes.png</code></div></div></figure>
+        <figure class="slot glow-blue" style="margin:22px 0 0"><img src="assets/shots/uniformes.webp" alt="Ajustes de Rally, pestaña Uniformes" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/uniformes.webp</code></div></div></figure>
       </div>
     </div>
     <p style="margin-top:44px;max-width:62ch;color:var(--soft)">Además: respaldo de tu identidad, nick y ajustes en un archivo (en Ajustes, Cuenta); Discord con la sala y el marcador, cada dato se apaga por separado; y español, inglés y portugués.</p>
@@ -239,7 +232,7 @@
     <h2>Modo streamer</h2>
     <p class="intro">Para que no se te escape nada en el directo.</p>
     <div class="split wide-l">
-      <figure class="slot" style="margin:0;--r:4/3"><img src="assets/shots/streamer.png" alt="Ajustes de Rally, pestaña Streamer" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Streamer, o una sala con el link y las claves difuminados.<br><code>assets/shots/streamer.png</code></div></div></figure>
+      <figure class="slot glow-pink" style="margin:0;--r:4/3"><img src="assets/shots/streamer.webp" alt="Ajustes de Rally, pestaña Streamer" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Streamer, o una sala con el link y las claves difuminados.<br><code>assets/shots/streamer.webp</code></div></div></figure>
       <div>
         <ul class="list" style="margin-top:0">
           <li>Difumina el link de la sala y escribe las contraseñas como puntos.</li>

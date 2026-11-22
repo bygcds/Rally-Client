@@ -78,3 +78,48 @@ pre code{background:none;padding:0;font:inherit}
 .faq.wide{max-width:780px;margin-top:56px}
 .sub-h{margin-top:44px}
 .note{font-size:15px;color:var(--soft);margin-top:14px;max-width:70ch}
+/* ---- Tema oscuro: mismo mundo que las capturas (negro con luz roja y azul) y toques GTA VI ---- */
+:root{--ink:#f1f1ee;--soft:#a3a7ac;--line:rgba(255,255,255,.11);--bg:#0b0c0e;--bg2:#101216;--pink:#ff3fa0;--violet:#7846ff;color-scheme:dark}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--ink)}
+::selection{background:var(--pink);color:#fff}
+code,kbd{background:rgba(255,255,255,.09)}
+main>section:not(.hero){background:radial-gradient(55% 45% at 0% 25%,rgba(229,110,86,.10),transparent 70%),var(--bg)}
+main>section.paper{background:radial-gradient(55% 45% at 100% 70%,rgba(86,137,229,.13),transparent 70%),var(--bg2)}
+main>section+section{border-top:1px solid var(--line)}
+.nav{background:rgba(11,12,14,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:0;position:sticky}
+.nav:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--pink),var(--violet),transparent);opacity:.55}
+.hero{background-color:#0d0b14;background-image:radial-gradient(70% 90% at 10% 15%,rgba(255,63,160,.30),transparent 62%),radial-gradient(60% 80% at 95% 85%,rgba(120,70,255,.38),transparent 64%),radial-gradient(40% 60% at 62% 0%,rgba(86,137,229,.16),transparent 70%),repeating-linear-gradient(100deg,rgba(255,255,255,.03) 0 64px,transparent 64px 128px)}
+.hero h1{background:linear-gradient(180deg,#fff 15%,#ffc1e2 55%,#b9a0ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero p.lead{color:#d2d4d8}
+.btn.dark{background:linear-gradient(100deg,var(--pink),var(--violet));border-color:transparent;color:#fff}
+.btn.dark:hover{background:linear-gradient(100deg,var(--pink),var(--violet));filter:brightness(1.12)}
+.plat{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:10px;box-shadow:0 30px 60px -34px rgba(0,0,0,.9)}
+.plats .plat:first-child{background:radial-gradient(90% 70% at 0% 0%,rgba(229,110,86,.16),transparent 65%),rgba(255,255,255,.035)}
+.plats .plat:last-child{background:radial-gradient(90% 70% at 100% 0%,rgba(86,137,229,.18),transparent 65%),rgba(255,255,255,.035)}
+pre{background:#060708;border:1px solid var(--line)}
+figure.slot img{border-radius:10px;border:1px solid rgba(255,255,255,.1);background:var(--bg);box-shadow:0 34px 70px -36px rgba(0,0,0,.95)}
+.ph{border-color:rgba(255,255,255,.22);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(255,255,255,.03) 14px 28px);color:var(--soft)}
+.ph b{color:var(--ink)}
+.cmds dt a{border-bottom-color:rgba(255,255,255,.28)}
+footer{background:#07080a;color:#8d9196;border-top:1px solid var(--line)}
+/* ---- Más aire entre bloques y luz propia en algunas capturas ---- */
+.sub-h{margin-top:84px}
+figure.slot.glow-red img{border-color:rgba(229,110,86,.45);box-shadow:0 0 0 1px rgba(229,110,86,.18),0 28px 90px -22px rgba(229,110,86,.5)}
+figure.slot.glow-blue img{border-color:rgba(86,137,229,.5);box-shadow:0 0 0 1px rgba(86,137,229,.2),0 28px 90px -22px rgba(86,137,229,.55)}
+figure.slot.glow-pink img{border-color:rgba(255,63,160,.4);box-shadow:0 0 0 1px rgba(255,63,160,.16),0 28px 90px -22px rgba(120,70,255,.6)}
+/* ---- En la partida: comandos a dos columnas y funciones sueltas ---- */
+.cmds.two{grid-template-columns:max-content 1fr max-content 1fr;column-gap:0}
+.cmds.two dd{padding-right:36px}.cmds.two dd:nth-of-type(even){padding-right:0}
+@media(max-width:900px){.cmds.two{grid-template-columns:max-content 1fr}.cmds.two dd{padding-right:0}}
+@media(max-width:600px){.cmds.two{grid-template-columns:1fr}}
+.mini{display:grid;gap:36px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:84px;padding-top:36px;border-top:1px solid var(--line)}
+@media(max-width:860px){.mini{grid-template-columns:1fr;margin-top:60px}}
+/* ---- Retoques de acabado ---- */
+html{scrollbar-color:#3a3d44 var(--bg)}
+h1,h2,h3{text-wrap:balance}p,li,dd{text-wrap:pretty}
+.nav nav a{border-radius:4px;transition:opacity .15s,background .15s}.nav nav a:hover{background:rgba(255,255,255,.07)}
+footer{position:relative}footer:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--pink),var(--violet),transparent);opacity:.45}
+.plat .btn{width:100%;justify-content:center}
+details.rel summary:hover,.faq summary:hover{color:#fff}
+.faq details[open] summary{color:#fff}
