@@ -1,84 +1,213 @@
-# Rally — Cliente no oficial de HaxBall para Windows (Unofficial HaxBall Client)
+# Rally - Cliente no oficial de HaxBall para Windows y Linux
 
-**Rally** es un cliente de escritorio no oficial para [HaxBall](https://www.haxball.com) (Windows 10 y 11) diseñado para mejorar tu experiencia competitiva: **FPS desbloqueados, 18 marcadores reales, minimapa, modo streamer, resolución estirada, uniformes personalizados y grabación automática de replays**.
+**Rally** es un cliente no oficial de escritorio para [HaxBall](https://www.haxball.com), disponible para Windows y Linux. Permite jugar con ajustes de rendimiento, replays automáticos, estadísticas locales, minimapa, marcadores de competiciones reales, uniformes personalizados y más opciones visuales y controles.
 
-> **English:** **Rally** is an unofficial desktop client and launcher for **HaxBall** (Windows 10 & 11) featuring unlocked FPS, 18 real-life football scoreboards, minimap, streamer mode, stretched resolution, custom kits, and automatic `.hbr2` replay recording.  
-> **Português:** **Rally** é um cliente não oficial de **HaxBall** para Windows com FPS desbloqueado, 18 placares reais, minimapa, modo streamer, resolução esticada, uniformes personalizados e gravação automática de replays.
+**English:** Rally is an unofficial HaxBall desktop client for Windows and Linux with FPS controls, automatic `.hbr2` replay recording, statistics, a minimap, 20 real football scoreboards, custom kits and a streamer mode.
 
-🌐 **Web oficial y capturas:** [bygcds.github.io/Rally-Client](https://github.io)  
-⬇️ **Última versión (v0.1.26):** [Descargar en Releases](../../releases/latest)
+**Português:** Rally é um cliente não oficial de HaxBall para Windows e Linux com controle de FPS, gravação automática de replays `.hbr2`, estatísticas, minimapa, 20 placares reais, uniformes personalizados e modo streamer.
 
-> Rally **no está afiliado ni respaldado por HaxBall** ni por su autor. HaxBall pertenece a sus respectivos dueños. Rally carga el juego oficial desde `haxball.com` y no incluye ni redistribuye su código.
+Sitio oficial: [bygcds.github.io/Rally-Client](https://bygcds.github.io/Rally-Client/)
 
----
-
-## Descarga e instalación
-
-1. Entra en **[Releases](../../releases/latest)**.
-2. Descarga el instalador `Rally-Setup-<versión>.exe` y ejecútalo.
-3. Elige tu idioma (**Español, Inglés o Portugués**) al abrirlo y sigue la guía de bienvenida.
-
-**Requisitos:** Windows 10 u 11 (64 o 32 bits). No requiere permisos de administrador.
-
-> **Aviso de Windows (SmartScreen):** Como el instalador aún no está firmado digitalmente, Windows puede mostrar *"Windows protegió su PC"*. Pulsa **Más información → Ejecutar de todas formas**.
+Rally no está afiliado ni respaldado por HaxBall ni por su autor. HaxBall pertenece a sus respectivos dueños. Rally carga el juego oficial desde `haxball.com` y no incluye ni redistribuye su código.
 
 ---
 
-## Características principales (Qué trae Rally)
+## Descarga
 
-### ⚡ Rendimiento y Competitivo
-* **FPS desbloqueados:** Elimina el límite de FPS del navegador, desactiva VSync y monitoriza tus FPS en tiempo real.
-* **Resolución estirada:** Configura aspecto `4:3`, `5:4` o escribe tu propia resolución personalizada, como en los *shooters* competitivos.
-* **Minimapa táctico:** Visualiza todo el estadio en miniatura con el balón y los jugadores (configurable por tamaño, posición, opacidad y colores de uniforme).
-* **Estadísticas locales:** Registra tus goles, asistencias y horas jugadas directamente en tu PC.
-* **Teclas en pantalla (*Keystrokes*):** Muestra `WASD` / flechas y patada en tiempo real con posición y opacidad ajustables.
+Las últimas versiones están disponibles en [Releases](../../releases/latest).
 
-### 🏆 18 Marcadores Reales y Personalización Visual
-* **Marcadores de competiciones reales:** Sustituye el marcador clásico por el de la *Champions League, Europa League, Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, MLS, Liga Profesional, Brasileirão, Copa Libertadores, Eurocopa 2024, Copa América 2024, UEFA Nations League* y los Mundiales de *EE. UU. 2026, Qatar 2022, Brasil 2014 y Sudáfrica 2010* (con banderas dinámicas por código de país).
-* **Uniformes personalizados:** Crea, previsualiza y guarda tus propios diseños de camisetas o carga clubes y selecciones con un clic (solo visibles para ti).
-* **Color del balón y saturación:** Cambia el color del balón y ajusta la saturación del campo (`50%` a `200%`) sin pérdida de FPS.
-* **Modo daltonismo:** Filtros específicos para *protanopia, deuteranopia y tritanopia* con paleta de alto contraste.
-* **Temas de interfaz:** Modo oscuro por defecto y tema especial **GTA VI**.
+### Windows
 
-### 🎥 Modo Streamer y Replays Automáticos
-* **Grabación automática (`.hbr2`):** Guarda todas tus partidas sin interrupciones con fecha, nombre de sala y marcador. Abre cualquier archivo `.hbr2` con doble clic en Rally.
-* **Modo Streamer (OBS / Twitch / Kick):** Difumina automáticamente el enlace de la sala, oculta contraseñas, esconde tu clave de identidad y protege tu Discord Rich Presence al detectar programas de transmisión.
-* **Atajos de teclado:** Captura de pantalla al portapapeles (`F9`), pantalla completa (`F11`), ocultar HUD, activar/desactivar grabación y salida rápida.
+1. Descarga `Rally-Setup-<versión>.exe`.
+2. Ejecuta el instalador y sigue la guía de bienvenida.
+3. Elige español, inglés o portugués al abrir Rally.
 
-### 🌐 Lista de Salas Inteligente y Comandos
-* **Integración con MrHost y Salas Recientes:** Accede directo a las salas de MrHost sin buscar enlaces y vuelve con un clic a tus últimas salas jugadas.
-* **Comandos locales en el chat** (solo los ves tú):
-  * `/fps` — Muestra el medidor de FPS o fija un límite (`/fps 144`, `/fps 0`).
-  * `/net` — Monitor de ping real, *jitter* y pérdida de paquetes.
-  * `/gif` — Activa avatares animados.
-  * `/fakeping` — Cambia el ping visible para los demás en la lista de jugadores.
-  * `/stats` — Muestra tu historial de goles y asistencias.
-  * `!bb` — Sale de la sala al instante.
+Rally para Windows requiere Windows 10 u 11, 64 o 32 bits. No hace falta ser administrador.
+
+Como el instalador todavía no está firmado digitalmente, Windows puede mostrar el mensaje "Windows protegió tu PC". Pulsa **Más información** y después **Ejecutar de todas formas**.
+
+### Linux
+
+Descarga el archivo `Rally-<versión>-x86_64.AppImage` para sistemas de 64 bits.
+
+```bash
+chmod +x Rally-*-x86_64.AppImage
+./Rally-*-x86_64.AppImage
+```
+
+También puedes habilitar el permiso de ejecución desde las propiedades del archivo. Si hace falta FUSE, instala `libfuse2`.
+
+La versión de Linux tiene las mismas funciones principales que Windows y se actualiza automáticamente.
+
+---
+
+## Funciones principales
+
+### Rendimiento y juego competitivo
+
+- Modo normal, FPS desbloqueados y opción sin VSync.
+- Límite de FPS manual o automático según la frecuencia del monitor.
+- Medidor de FPS y latencia de teclas.
+- Monitor de ping, jitter y pérdida de paquetes.
+- Resolución estirada con relaciones 4:3, 5:4 o una proporción personalizada.
+- Saturación de pantalla y filtros de protanopia, deuteranopia y tritanopia.
+- Lado fijo para jugar siempre desde la izquierda o la derecha.
+- Teclas en pantalla para WASD o flechas y la acción de patada.
+- Asignación de botones del mouse a controles del juego.
+- Atajos configurables sin interferir mientras escribes en el chat.
+
+### Minimapa y estadísticas
+
+- Visualización de todo el estadio, el balón y los jugadores.
+- Posición, tamaño y opacidad configurables.
+- Aparición automática en mapas grandes o permanente.
+- Colores de jugadores según su uniforme.
+- Señal adicional en mapas grandes de Real Soccer para saques de banda, esquina y portería.
+- Registro local de goles, asistencias y horas jugadas.
+
+### Marcadores
+
+Rally incluye 20 marcadores de ligas y competiciones reales:
+
+- Mundiales de Sudáfrica 2010, Brasil 2014, Catar 2022 y Estados Unidos 2026.
+- Copa América y Eurocopa.
+- UEFA Champions League, UEFA Europa League y UEFA Nations League.
+- Premier League, LaLiga, Serie A, Bundesliga, Ligue 1 y otras ligas.
+- MLS, Liga Profesional y competiciones sudamericanas.
+- Marcador clásico original de HaxBall.
+
+Los marcadores permiten elegir posición y tamaño, cambiar las líneas según el uniforme, ocultarse con un atajo e incluir banderas mediante códigos de hasta cuatro letras.
+
+### Editor de HUD
+
+La pantalla de tamaño real permite mover y cambiar el tamaño del marcador, el minimapa y las teclas en pantalla. Las piezas pueden alinearse al centro o volver a su posición automática.
+
+### Salas
+
+- Acceso directo a las salas publicadas por MrHost.
+- Lista configurable de salas recientes, con jugadores y distancia.
+- Reconexión rápida a la última sala.
+- Salas favoritas y filtros por contraseña, salas llenas o vacías.
+- Búsqueda por país y por nombre.
+- Confirmación antes de cerrar una sala.
+- Reconocimiento de nombres con letras especiales y emojis.
+- Modo sandbox para practicar sin internet, sin enlace y sin aparecer en la lista de HaxBall.
+
+### Uniformes y apariencia
+
+- Uniformes personalizados con vista previa y biblioteca.
+- Selecciones y clubes de ejemplo disponibles con un clic.
+- Color del balón visible solo para el jugador.
+- Resolución personalizada.
+- Ajuste de saturación.
+- Temas Rally, GTA VI y Clásico.
+- Panel de sala translúcido.
+- Fondo de cancha opcional, desactivado de forma predeterminada.
+- Fondo configurable durante pausas.
+
+Las personalizaciones visuales solo se muestran en tu cliente.
+
+### Replays
+
+Rally puede grabar automáticamente todas las partidas en archivos `.hbr2`, con fecha, nombre de sala y marcador.
+
+- Apertura de cualquier replay con doble clic.
+- Biblioteca local desde **Ajustes → Replays**.
+- Activación o desactivación con `/autorec`.
+- Marcadores y puntos de interés dentro de la reproducción.
+- Los replays se conservan al actualizar o reinstalar.
+
+En Windows se guardan en `%APPDATA%\RallyClient\Replays`. En Linux suelen estar en `~/.config/RallyClient/Replays`.
+
+### Modo streamer
+
+- Difumina enlaces y contraseñas.
+- Oculta la clave de identidad.
+- Difumina el nombre de las salas recientes y la sala actual.
+- Puede ocultar el chat.
+- Activación manual, mediante atajo o automática al detectar OBS, Streamlabs, Twitch Studio, XSplit o vMix.
+- Opciones normales, privadas o desactivadas para Discord Rich Presence.
+
+En Linux, la detección automática reconoce OBS.
+
+### Comandos locales
+
+Los comandos se procesan en tu equipo y no llegan al chat de la sala.
+
+| Comando | Función |
+| --- | --- |
+| `/fps` | Muestra el medidor de FPS y latencia. |
+| `/fps 144` | Establece un límite de 144 FPS. |
+| `/fps auto` | Usa el doble de los Hz del monitor. |
+| `/fps 0` | Desbloquea el límite de FPS. |
+| `/net` | Muestra ping, jitter y pérdida de paquetes. |
+| `/stats` | Muestra goles, asistencias y horas jugadas. |
+| `/gif 1 2 3` | Activa avatares animados. |
+| `/fakeping 67` | Cambia el ping visible para los demás. |
+| `/glass` | Hace translúcido el panel de la sala. |
+| `/autorec` | Activa o desactiva los replays automáticos. |
+| `!bb` | Permite salir de la sala al instante. |
 
 ---
 
 ## Actualizaciones
 
-Rally avisa cuando hay una versión nueva y se **descarga e instala sola con un clic** (*Actualizar → Reiniciar e instalar*). Las actualizaciones tienen un plazo de unos días; pasado el plazo es necesario actualizar para seguir jugando. Todos tus ajustes, uniformes y replays se conservan.
+Rally avisa cuando hay una versión nueva y permite descargarla e instalarla desde el cliente con **Actualizar → Reiniciar e instalar**.
+
+Los ajustes, uniformes y replays se conservan. Las novedades aparecen después de actualizar y pueden consultarse desde **Ajustes → Varios → Ver novedades**.
+
+Algunas versiones tienen un período limitado de actualización. Después hay que actualizar para seguir jugando.
 
 ---
 
-## Preguntas frecuentes (FAQ)
+## Sin conexión
 
-**¿Dónde se guardan mis replays y mapas?**  
-En `%APPDATA%\RallyClient\Replays` y `%APPDATA%\RallyClient\Stadiums`. Desde **Ajustes → Replays** tienes un botón para abrir la carpeta directamente.
+Rally puede abrirse sin internet. La primera vez que se abre con conexión guarda una copia local del juego y la renueva periódicamente.
 
-**¿Qué datos envía Rally?**  
-Ninguno. Rally no tiene servidores propios; solo se conecta a `haxball.com` (para cargar el juego) y a GitHub (para comprobar y descargar actualizaciones). Tus configuraciones y estadísticas se guardan únicamente en tu PC.
-
-**¿Qué pasa si HaxBall se actualiza?**  
-Rally modifica el juego en memoria al abrirlo. Si HaxBall cambia su código interno, las funciones afectadas se desactivan automáticamente (el juego sigue funcionando con normalidad) hasta que se publique la actualización de Rally.
-
-**Quiero reportar un error o sugerir una función.**  
-Abre un [issue](../../issues) indicando tu versión de Rally (**Ajustes → Varios → Acerca de**) y qué estabas haciendo.
+Sin conexión, el modo sandbox sigue disponible y la lista de salas queda vacía. Las actualizaciones esperan hasta recuperar internet.
 
 ---
 
-## Licencia
+## Privacidad y compatibilidad
 
-© bygcds. Todos los derechos reservados. El código fuente de Rally no es público; este repositorio contiene los instaladores oficiales y el registro de novedades.
+Rally no tiene servidores propios. Solo se conecta a `haxball.com` para cargar el juego y a GitHub para comprobar y descargar actualizaciones.
+
+Los ajustes, uniformes, estadísticas y replays se guardan en tu equipo. Discord Rich Presence es opcional y sus datos pueden desactivarse por separado.
+
+Si HaxBall cambia internamente, las funciones que modifican el juego pueden desactivarse temporalmente mientras el juego oficial sigue funcionando con normalidad.
+
+---
+
+## Preguntas frecuentes
+
+**¿Dónde se guardan los replays y los mapas?**
+
+En Windows, los replays están en `%APPDATA%\RallyClient\Replays` y los estadios en `%APPDATA%\RallyClient\Stadiums`. En Linux suelen encontrarse en `~/.config/RallyClient/`.
+
+**¿Qué datos envía Rally?**
+
+Rally no envía estadísticas ni ajustes a servidores propios. Solo se conecta a `haxball.com` y a GitHub para cargar el juego y gestionar las actualizaciones.
+
+**¿Qué pasa si HaxBall se actualiza?**
+
+Las funciones afectadas se desactivan temporalmente hasta que salga una versión compatible de Rally.
+
+**¿La versión de Linux es igual a la de Windows?**
+
+Sí. Tiene el mismo código y las mismas funciones principales. Algunas opciones del modo streamer pueden variar según los programas detectados por el sistema.
+
+**¿En qué idiomas está disponible?**
+
+Español, inglés y portugués.
+
+**¿Cómo reporto un problema?**
+
+Abre un [issue](../../issues) con la versión que aparece en **Ajustes → Varios → Acerca de**, tu sistema operativo y una descripción breve de lo ocurrido.
+
+---
+
+## Nota sobre el código
+
+Este repositorio contiene los instaladores publicados de Rally y el registro de novedades. El código fuente de Rally no es público y este repositorio no es un proyecto de código abierto.
+
+© bygcds. Todos los derechos reservados.
