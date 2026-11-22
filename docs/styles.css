@@ -123,3 +123,13 @@ footer{position:relative}footer:before{content:"";position:absolute;left:0;right
 .plat .btn{width:100%;justify-content:center}
 details.rel summary:hover,.faq summary:hover{color:#fff}
 .faq details[open] summary{color:#fff}
+/* ---- Novedades: última versión destacada, anteriores plegadas ---- */
+.badge{display:inline-block;margin-left:12px;padding:3px 10px;border-radius:99px;font:700 13px/1.4 var(--body);letter-spacing:.02em;color:#fff;vertical-align:middle;background:linear-gradient(100deg,var(--pink),var(--violet))}
+.more{margin-top:26px;padding:11px 20px;border-radius:6px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);color:var(--ink);font:600 16px var(--body);cursor:pointer}
+.more:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
+.older{max-height:460px;overflow:auto;margin-top:14px;padding-right:14px;border-bottom:1px solid var(--line)}
+.older[hidden]{display:none}
+.legend .k{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 6px 0 14px;vertical-align:baseline}.legend .k:first-child{margin-left:0}
+.k-new{background:var(--blue)}.k-imp{background:#8a8d90}.k-fix{background:var(--red)}
+.legend a{color:var(--ink)}
+.older{margin-bottom:22px}

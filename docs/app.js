@@ -36,22 +36,42 @@
       if (v) $$('[data-version]').forEach(function (s) { s.textContent = 'Versión ' + v + '.'; });
     }).catch(function () {});
 
-  // Novedades: la última abierta, las demás plegadas.
+  // Novedades: la última abierta, 3 más a la vista y el resto detrás de un botón (así no crece sin fin).
+  var RECENT = 4;
   var box = document.getElementById('timeline');
+  function release(v, first) {
+    var wrap = el(first ? 'div' : 'details', 'rel');
+    var head = first ? el('h3') : el('summary');
+    head.appendChild(document.createTextNode(v.version));
+    if (first) head.appendChild(el('span', 'badge', 'Última'));
+    head.appendChild(el('small', '', (v.title && v.title.es) || ''));
+    wrap.appendChild(head);
+    var ul = el('ul');
+    (v.items || []).forEach(function (it) { ul.appendChild(el('li', it.type, (it.text && it.text.es) || '')); });
+    wrap.appendChild(ul);
+    return wrap;
+  }
   fetch('changelog.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (d) {
+      var list = d.versions || [];
       box.textContent = '';
-      (d.versions || []).forEach(function (v, i) {
-        var wrap = el(i === 0 ? 'div' : 'details', 'rel');
-        var head = i === 0 ? el('h3') : el('summary');
-        head.appendChild(document.createTextNode(v.version));
-        head.appendChild(el('small', '', (v.title && v.title.es) || ''));
-        wrap.appendChild(head);
-        var ul = el('ul');
-        (v.items || []).forEach(function (it) { ul.appendChild(el('li', it.type, (it.text && it.text.es) || '')); });
-        wrap.appendChild(ul);
-        box.appendChild(wrap);
+      list.slice(0, RECENT).forEach(function (v, i) { box.appendChild(release(v, i === 0)); });
+      var rest = list.slice(RECENT);
+      if (!rest.length) return;
+      var older = el('div', 'older');
+      older.hidden = true;
+      rest.forEach(function (v) { older.appendChild(release(v, false)); });
+      var btn = el('button', 'more', 'Ver versiones anteriores (' + rest.length + ')');
+      btn.type = 'button';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.addEventListener('click', function () {
+        var open = older.hidden;
+        older.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+        btn.textContent = open ? 'Ocultar versiones anteriores' : 'Ver versiones anteriores (' + rest.length + ')';
       });
+      box.appendChild(btn);
+      box.appendChild(older);
     }).catch(function () { box.textContent = ''; box.appendChild(el('p', 'legend', 'No se pudieron cargar las novedades. Inténtalo más tarde.')); });
 })();
