@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rally, cliente no oficial de HaxBall para Windows</title>
-<meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows. FPS sin tope, replays automáticos, estadísticas y 15 marcadores.">
+<title>Rally, cliente no oficial de HaxBall para Windows y Linux</title>
+<meta name="description" content="Rally es un cliente no oficial de HaxBall para Windows y Linux. FPS sin tope, replays automáticos, estadísticas, minimapa, sala sandbox y 20 marcadores.">
 <meta name="theme-color" content="#1d1f21">
 <meta property="og:title" content="Rally, cliente no oficial de HaxBall">
-<meta property="og:description" content="Sin tope de FPS, replays automáticos, estadísticas y 15 marcadores. Para Windows.">
+<meta property="og:description" content="FPS sin tope, replays automáticos, estadísticas, minimapa y 20 marcadores. Para Windows y Linux.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="assets/icon-128.png">
 <link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,8 +17,8 @@
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top" aria-label="Rally"><img src="assets/logo.png" alt="" width="30" height="30">Rally</a>
-  <nav aria-label="Principal"><a href="#salas">Salas</a><a href="#partida">Partida</a><a href="#imagen">Imagen</a><a href="#marcadores">Marcadores</a><a href="#novedades">Novedades</a></nav>
-  <a class="btn" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar</a>
+  <nav aria-label="Principal"><a href="#salas">Salas</a><a href="#partida">Partida</a><a href="#imagen">Imagen</a><a href="#marcadores">Marcadores</a><a href="#streamer">Streamer</a><a href="#novedades">Novedades</a></nav>
+  <a class="btn" href="#descargar">Descargar</a>
 </div></header>
 
 <main id="main">
@@ -26,13 +26,14 @@
   <img class="mark" src="assets/logo.png" alt="" width="256" height="256">
   <div class="wrap">
     <h1>Rally</h1>
-    <p class="what">Cliente no oficial de HaxBall para Windows.</p>
-    <p class="lead">Sin tope de FPS, replays automáticos, estadísticas y 15 marcadores.</p>
+    <p class="what">Cliente no oficial de HaxBall para Windows y Linux.</p>
+    <p class="lead">FPS sin tope, replays automáticos, estadísticas, minimapa y 20 marcadores. Casi todo es opcional y lo ves solo tú.</p>
     <div class="cta">
-      <a class="btn" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar</a>
-      <a class="btn ghost" href="#novedades">Novedades de la 0.1.24</a>
+      <a class="btn" data-dl="win" href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar para Windows</a>
+      <a class="btn" data-dl="linux" href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar para Linux</a>
+      <a class="btn ghost" href="#novedades">Novedades</a>
     </div>
-    <p class="meta">Windows 10 y 11. <span data-version></span></p>
+    <p class="meta">Windows 10 y 11, o Linux de 64 bits (AppImage). <span data-version></span></p>
   </div>
 </section>
 
@@ -41,11 +42,13 @@
   <div class="wrap">
     <h2>Qué trae</h2>
     <dl class="cmds" style="margin-top:28px">
-      <dt><a href="#salas">Salas</a></dt><dd>Salas de MrHost, tu última sala y favoritas.</dd>
-      <dt><a href="#partida">En la partida</a></dt><dd>FPS, comandos, atajos de teclado y estadísticas.</dd>
-      <dt><a href="#imagen">Imagen</a></dt><dd>Balón, resolución, saturación, daltonismo y temas.</dd>
-      <dt><a href="#marcadores">Marcadores</a></dt><dd>15 estilos de competiciones reales.</dd>
-      <dt><a href="#replays">Replays y uniformes</a></dt><dd>Grabación automática y uniformes propios.</dd>
+      <dt><a href="#salas">Salas</a></dt><dd>Salas de MrHost, recientes, favoritas y una sala sandbox para practicar sin internet.</dd>
+      <dt><a href="#partida">En la partida</a></dt><dd>FPS, comandos, atajos, estadísticas, minimapa, teclas en pantalla y el mouse como tecla.</dd>
+      <dt><a href="#imagen">Imagen</a></dt><dd>Balón, resolución, saturación, daltonismo, lado fijo y tres temas.</dd>
+      <dt><a href="#marcadores">Marcadores</a></dt><dd>20 estilos y un editor para colocar el HUD donde quieras.</dd>
+      <dt><a href="#replays">Replays y uniformes</a></dt><dd>Grabación automática, uniformes propios, respaldo y Discord.</dd>
+      <dt><a href="#streamer">Modo streamer</a></dt><dd>Esconde del directo el link, las claves y el nombre de tu sala.</dd>
+      <dt><a href="#descargar">Windows y Linux</a></dt><dd>El mismo código en los dos, y los dos se actualizan solos.</dd>
     </dl>
   </div>
 </section>
@@ -57,10 +60,23 @@
       <figure class="slot" style="margin:0"><img src="assets/shots/lista-salas.png" alt="Lista de salas de Rally con las salas de MrHost" width="1260" height="820" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/lista-salas.png</code></div></div></figure>
       <ul class="list" style="margin-top:0">
         <li>El botón de MrHost lista sus salas y entras directo, sin buscar el link.</li>
+        <li>Arriba de la lista salen tus últimas salas, con jugadores y distancia si siguen abiertas. Tú decides cuántas ver, de 0 a 5.</li>
         <li>Si te echan o se cae la conexión, un clic te devuelve a tu última sala.</li>
         <li>Favoritas con estrella y filtros: con pass, llenas, vacías.</li>
+        <li>En el buscador escribe <code>mx</code>, <code>dom</code>, <code>colombia</code> o <code>usa</code> y salen las salas de ese país. También encuentra nombres con letras raras o emojis.</li>
         <li>Si cierras Rally dentro de una sala, te pide confirmar.</li>
       </ul>
+    </div>
+    <p class="note">En las recientes solo entran las salas públicas de la lista y las de MrHost. Las que abres con un link no se guardan nunca.</p>
+
+    <div class="split wide-r sub-h">
+      <div>
+        <h3>Sala propia (sandbox)</h3>
+        <p style="color:var(--soft);margin-top:8px">En «Crear sala» hay un botón para abrir una sala solo para ti. No usa internet, no tiene link y no sale en la lista de HaxBall. Es el mismo juego, con los mismos controles y el mismo menú, así que sirve para practicar un rato.</p>
+        <h3 style="margin-top:28px">Sin conexión</h3>
+        <p style="color:var(--soft);margin-top:8px">Rally abre aunque no haya internet. La primera vez que lo abres con conexión guarda el juego en tu equipo (no viene dentro del instalador) y lo renueva cada día. Sin conexión la lista de salas queda vacía y las actualizaciones esperan, pero el sandbox funciona igual. Cuando vuelva el internet, reinicia Rally para reconectarte.</p>
+      </div>
+      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/sandbox.png" alt="Sala sandbox de Rally, abierta sin internet" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El botón de sandbox en «Crear sala», o una sala sandbox en marcha.<br><code>assets/shots/sandbox.png</code></div></div></figure>
     </div>
   </div>
 </section>
@@ -73,7 +89,7 @@
       <div>
         <p class="intro" style="margin:0 0 8px">Los comandos se escriben en el chat. Los resuelve Rally en tu PC y no llegan a la sala.</p>
         <dl class="cmds">
-          <dt><code>/fps</code></dt><dd>Medidor de FPS. <code>/fps 144</code> pone un tope; <code>/fps 0</code> lo quita.</dd>
+          <dt><code>/fps</code></dt><dd>Medidor de FPS y de latencia de tecla. <code>/fps 144</code> pone un tope, <code>/fps auto</code> usa el doble de los Hz de tu monitor y <code>/fps 0</code> lo quita.</dd>
           <dt><code>/net</code></dt><dd>Ping, jitter y pérdida.</dd>
           <dt><code>/stats</code></dt><dd>Tus goles, asistencias y horas.</dd>
           <dt><code>/gif 1 2 3</code></dt><dd>Avatar animado.</dd>
@@ -92,22 +108,35 @@
           <tr><th>Teclas en pantalla</th><td>Mostrar u ocultar</td></tr>
           <tr><th>GIF y ping falso</th><td>Encender o apagar</td></tr>
           <tr><th>Grabar</th><td>Empezar o parar</td></tr>
+          <tr><th>Modo streamer</th><td>Encender o apagar</td></tr>
           <tr><th>Salir de la sala</th><td>Como <code>!bb</code></td></tr>
           <tr><th>Pantalla completa</th><td>F11</td></tr>
         </tbody></table>
         <figure class="slot" style="margin:24px 0 0;--r:4/3"><img src="assets/shots/atajos.png" alt="Ajustes de Rally, pestaña Atajos" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Atajos, con teclas asignadas.<br><code>assets/shots/atajos.png</code></div></div></figure>
       </div>
     </div>
-    <div class="split wide-r" style="margin-top:36px">
+
+    <div class="split wide-r" style="margin-top:56px">
       <div>
         <h3>FPS</h3>
-        <p style="color:var(--soft);margin-top:8px">Tres modos: normal, sin límite y sin vsync. Cambiar de modo pide reiniciar.</p>
+        <p style="color:var(--soft);margin-top:8px">Tres modos: normal, sin límite y sin vsync. Cambiar de modo pide reiniciar. El tope se cambia al instante, a mano o en automático.</p>
         <h3 style="margin-top:28px">Teclas en pantalla</h3>
         <p style="color:var(--soft);margin-top:8px">WASD o flechas y la patada, en la esquina que quieras. Experimental.</p>
+        <h3 style="margin-top:28px">Mouse como tecla</h3>
+        <p style="color:var(--soft);margin-top:8px">En Ajustes, Controles, pulsa «+» junto a una acción y haz clic con el botón que quieras: izquierdo, derecho, central o los laterales. Se puede combinar con el teclado.</p>
         <h3 style="margin-top:28px">Estadísticas</h3>
         <p style="color:var(--soft);margin-top:8px">Cada gol tuyo saca tu total en el chat. Solo cuentan partidas de verdad, y se guardan en tu PC.</p>
       </div>
+      <figure class="slot" style="margin:0;--r:4/3"><img src="assets/shots/rendimiento.png" alt="Ajustes de Rally, pestaña Rendimiento" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/rendimiento.png</code></div></div></figure>
+    </div>
+
+    <div class="split sub-h">
       <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/sala.png" alt="Una partida en Rally con marcador, teclas y medidor de red" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Una partida con marcador, teclas en pantalla y medidor de red a la vista.<br><code>assets/shots/sala.png</code></div></div></figure>
+      <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/minimapa.png" alt="Minimapa de Rally en una sala con un campo grande" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El minimapa en una sala de campo grande (Real Soccer).<br><code>assets/shots/minimapa.png</code></div></div></figure>
+    </div>
+    <div style="max-width:70ch;margin-top:36px">
+      <h3>Minimapa</h3>
+      <p style="color:var(--soft);margin-top:8px">El estadio entero en pequeño, con el balón y los jugadores. Se nota sobre todo en mapas grandes. Eliges si sale siempre o solo en mapas grandes, dónde va, el tamaño, la opacidad y si los jugadores usan el color de su uniforme. En las salas de Real Soccer muestra el césped con franjas, la zona de fuera y un aro que late donde el balón sale para un saque.</p>
     </div>
   </div>
 </section>
@@ -124,13 +153,31 @@
         <dt>Resolución</dt><dd>Estirada a 4:3, 5:4 o la que escribas.</dd>
         <dt>Saturación</dt><dd>Del 50 al 200 %, sin filtros sobre la pantalla.</dd>
         <dt>Daltonismo</dt><dd>Protanopia, deuteranopia o tritanopia.</dd>
-        <dt>Tema</dt><dd>Rally o GTA VI.</dd>
+        <dt>Lado fijo</dt><dd>Siempre ves el campo desde el mismo lado, seas rojo o azul.</dd>
+        <dt>Tema</dt><dd>Rally, GTA VI o Clásico.</dd>
         <dt>Chat</dt><dd>Opacidad y tamaño de letra.</dd>
+        <dt>Cancha animada</dt><dd>Fondo opcional, viene apagado porque gasta FPS.</dd>
       </dl>
     </div>
+
+    <div class="split sub-h">
+      <div>
+        <h3>Lado fijo</h3>
+        <p style="color:var(--soft);margin-top:8px">Eliges Izquierda (rojo) o Derecha (azul). Si te toca el otro equipo, el campo se refleja como en un espejo, se intercambian la izquierda y la derecha de tus teclas, y el marcador y la lista de jugadores también se voltean. Los nombres, avatares y uniformes se ven igual.</p>
+      </div>
+      <div>
+        <h3>Tema Clásico</h3>
+        <p style="color:var(--soft);margin-top:8px">El HaxBall de siempre, pero con todos los botones y funciones de Rally. Va bien con el marcador «HaxBall clásico».</p>
+      </div>
+    </div>
+
     <div class="split" style="margin-top:44px">
       <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/daltonismo.png" alt="El mismo campo sin corrección y con el modo daltonismo" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El mismo campo sin corrección y con modo daltonismo.<br><code>assets/shots/daltonismo.png</code></div></div></figure>
       <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/tema-gta6.png" alt="Rally con el tema GTA VI" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>La lista de salas o la sala con el tema GTA VI.<br><code>assets/shots/tema-gta6.png</code></div></div></figure>
+    </div>
+    <div class="split" style="margin-top:28px">
+      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/lado-fijo.png" alt="El mismo momento de juego con y sin lado fijo" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El mismo momento con el campo normal y con el campo reflejado por el lado fijo.<br><code>assets/shots/lado-fijo.png</code></div></div></figure>
+      <figure class="slot" style="margin:0;--r:16/10"><img src="assets/shots/tema-clasico.png" alt="Rally con el tema Clásico" width="1600" height="1000" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>La lista de salas o una sala con el tema Clásico.<br><code>assets/shots/tema-clasico.png</code></div></div></figure>
     </div>
   </div>
 </section>
@@ -138,23 +185,32 @@
 
 <section id="marcadores">
   <div class="wrap">
-    <h2>15 marcadores</h2>
+    <h2>20 marcadores</h2>
     <p class="intro">Cambias el marcador de HaxBall por el de una competición real. Solo lo ves tú.</p>
     <div class="split wide-r" style="margin-bottom:36px">
       <div>
-        <ul class="cols"><li>Champions League</li><li>Europa League</li><li>Premier League</li><li>LaLiga</li><li>Serie A</li><li>Bundesliga</li><li>Ligue 1</li><li>MLS</li><li>Liga Profesional</li><li>Brasileirão</li><li>Copa Libertadores</li><li>Eurocopa 2024</li><li>Copa América 2024</li><li>UEFA Nations League</li><li>Mundial 2026</li></ul>
+        <ul class="cols"><li>Predeterminado</li><li>HaxBall clásico</li><li>Champions League</li><li>Europa League</li><li>UEFA Nations League</li><li>Premier League</li><li>LaLiga</li><li>Serie A</li><li>Bundesliga</li><li>Ligue 1</li><li>MLS</li><li>Liga Profesional</li><li>Brasileirão</li><li>Copa Libertadores</li><li>Eurocopa 2024</li><li>Copa América 2024</li><li>Mundial EE. UU. 2026</li><li>Mundial Qatar 2022</li><li>Mundial Brasil 2014</li><li>Mundial Sudáfrica 2010</li></ul>
       </div>
       <ul class="list" style="margin-top:0">
         <li>Seis posiciones y tamaño del 40 al 200 %.</li>
         <li>Las líneas de color siguen el uniforme que ves en la sala.</li>
-        <li>Códigos de hasta 4 letras por equipo. En el Mundial 2026, ESP o ARG ponen la bandera.</li>
+        <li>Códigos de hasta 4 letras por equipo. En los Mundiales de 2026, 2022 y 2014, ESP o ARG ponen la bandera.</li>
+        <li>El de Sudáfrica 2010 es el de aquella transmisión: solo la abreviatura de cada equipo.</li>
         <li>Un atajo de teclado lo oculta y lo muestra.</li>
       </ul>
     </div>
-    <figure class="slot" style="margin:0;--r:16/6"><img src="assets/shots/marcadores-15.png" alt="Los 15 marcadores de Rally, uno junto a otro" width="2000" height="750" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Los 15 marcadores en una sola imagen, en el orden de las listas de abajo.<br><code>assets/shots/marcadores-15.png</code></div></div></figure>
+    <figure class="slot" style="margin:0;--r:16/6"><img src="assets/shots/marcadores-20.png" alt="Los 20 marcadores de Rally, uno junto a otro" width="2000" height="750" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Los 20 marcadores en una sola imagen, en el orden de la lista de arriba.<br><code>assets/shots/marcadores-20.png</code></div></div></figure>
     <div class="split" style="margin-top:28px">
-      <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-ajustes.png" alt="Ajustes de Rally, pestaña Marcador" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Marcador, estilos en 2 columnas con vista previa.<br><code>assets/shots/marcador-ajustes.png</code></div></div></figure>
+      <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-ajustes.png" alt="Ajustes de Rally, pestaña HUD, con la lista de marcadores" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña HUD, estilos en 2 columnas con vista previa.<br><code>assets/shots/marcador-ajustes.png</code></div></div></figure>
       <figure class="slot" style="--r:4/3"><img src="assets/shots/marcador-mundial-banderas.png" alt="Marcador del Mundial 2026 con dos banderas" width="1600" height="1200" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Marcador del Mundial 2026 con dos banderas (por ejemplo ESP y ARG).<br><code>assets/shots/marcador-mundial-banderas.png</code></div></div></figure>
+    </div>
+
+    <div class="split wide-r sub-h">
+      <div>
+        <h3>Editor del HUD</h3>
+        <p style="color:var(--soft);margin-top:8px">En Ajustes, HUD, pulsa «Abrir editor». Se abre una pantalla del tamaño real de tu juego y arrastras el marcador, el minimapa y las teclas adonde quieras. Estiras la esquina para cambiar el tamaño, hay imán al centro y flechas para afinar (con Mayús va más rápido). Cada pieza puede volver a su sitio automático cuando quieras.</p>
+      </div>
+      <figure class="slot" style="margin:0;--r:16/9"><img src="assets/shots/editor-hud.png" alt="El editor del HUD de Rally con el marcador, el minimapa y las teclas" width="1600" height="900" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>El editor del HUD con marcador, minimapa y teclas colocados.<br><code>assets/shots/editor-hud.png</code></div></div></figure>
     </div>
   </div>
 </section>
@@ -173,12 +229,32 @@
         <figure class="slot" style="margin:22px 0 0"><img src="assets/shots/uniformes.png" alt="Ajustes de Rally, pestaña Uniformes" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b><code>assets/shots/uniformes.png</code></div></div></figure>
       </div>
     </div>
-    <p style="margin-top:44px;max-width:62ch;color:var(--soft)">Además: respaldo de tu identidad, nick y ajustes en un archivo; Discord con la sala y el marcador (cada dato se apaga por separado); español, inglés y portugués.</p>
+    <p style="margin-top:44px;max-width:62ch;color:var(--soft)">Además: respaldo de tu identidad, nick y ajustes en un archivo (en Ajustes, Cuenta); Discord con la sala y el marcador, cada dato se apaga por separado; y español, inglés y portugués.</p>
   </div>
 </section>
 
 
-<section id="novedades">
+<section id="streamer">
+  <div class="wrap">
+    <h2>Modo streamer</h2>
+    <p class="intro">Para que no se te escape nada en el directo.</p>
+    <div class="split wide-l">
+      <figure class="slot" style="margin:0;--r:4/3"><img src="assets/shots/streamer.png" alt="Ajustes de Rally, pestaña Streamer" width="1672" height="1232" loading="lazy" onerror="this.closest('figure').classList.add('pending')"><div class="ph"><div><b>Falta la captura</b>Ajustes, pestaña Streamer, o una sala con el link y las claves difuminados.<br><code>assets/shots/streamer.png</code></div></div></figure>
+      <div>
+        <ul class="list" style="margin-top:0">
+          <li>Difumina el link de la sala y escribe las contraseñas como puntos.</li>
+          <li>Esconde tu clave de identidad.</li>
+          <li>Difumina el nombre de tu sala y el de las recientes (se ven al pasar el ratón). El chat también, si quieres.</li>
+          <li>Se activa a mano, con un atajo o solo, cuando detecta OBS, Streamlabs, Twitch Studio, XSplit o vMix. En Linux la detección automática reconoce OBS.</li>
+          <li>En Discord eliges entre normal, privado (sin nombre de sala y sin el botón «Unirse», que le regala el link a todos tus seguidores) o apagado mientras dure el modo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="paper" id="novedades">
   <div class="wrap">
     <h2>Novedades</h2>
     <div class="tl" id="timeline"><p class="legend">Cargando…</p></div>
@@ -187,24 +263,43 @@
 </section>
 
 
-<section class="paper" id="descargar">
+<section id="descargar">
   <div class="wrap">
     <h2>Descargar</h2>
-    <div class="dl">
-      <div>
-        <a class="btn dark" data-download href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar Rally</a>
-        <p class="file" data-file></p>
-        <p class="file">Para Windows 10 y 11. <a href="https://github.com/bygcds/Rally-Client/releases">Todas las versiones</a>.</p>
+    <div class="plats">
+      <div class="plat">
+        <h3>Windows</h3>
+        <p class="sub">Windows 10 y 11, 64 y 32 bits.</p>
+        <a class="btn dark" data-dl="win" href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar el instalador</a>
+        <p class="file" data-file="win"></p>
+        <p class="sha" data-sha="win"></p>
         <p class="file">El instalador aún no está firmado: si Windows dice «protegió su PC», pulsa Más información y Ejecutar de todas formas. Baja solo el <code>.exe</code>, y solo de este repositorio.</p>
       </div>
-      <div class="faq" style="margin-top:-16px">
-        <details><summary>¿Qué datos envía Rally?</summary><p>Ninguno. No tiene servidores. Solo se conecta a haxball.com y a GitHub para buscar actualizaciones.</p></details>
-        <details><summary>¿Dónde se guardan los replays?</summary><p>En <code>%APPDATA%\RallyClient\Replays</code>. Ajustes, pestaña Replays, tiene un botón para abrir la carpeta.</p></details>
-        <details><summary>¿Y si HaxBall se actualiza?</summary><p>Las funciones que modifican el juego se apagan solas y el juego sigue normal hasta que salga una versión nueva de Rally.</p></details>
-        <details><summary>¿Hay que actualizar siempre?</summary><p>Cada versión tiene un plazo de unos días. Después hay que actualizar para seguir jugando.</p></details>
-        <details><summary>¿Linux o Mac?</summary><p>Por ahora solo Windows.</p></details>
-        <details><summary>Un problema o una idea</summary><p>Abre un <a href="https://github.com/bygcds/Rally-Client/issues">issue</a> con tu versión de Rally (Ajustes, Varios, Acerca de).</p></details>
+      <div class="plat">
+        <h3>Linux</h3>
+        <p class="sub">64 bits, en formato AppImage. No hace falta instalar nada.</p>
+        <a class="btn dark" data-dl="linux" href="https://github.com/bygcds/Rally-Client/releases/latest">Descargar el AppImage</a>
+        <p class="file" data-file="linux"></p>
+        <p class="sha" data-sha="linux"></p>
+        <ol>
+          <li>Dale permiso de ejecución y ábrelo:</li>
+        </ol>
+        <pre><code>chmod +x Rally-*-x86_64.AppImage
+./Rally-*-x86_64.AppImage</code></pre>
+        <p class="file">También puedes darle permiso desde el administrador de archivos (Propiedades, Permisos). Si no abre, instala <code>libfuse2</code>, que algunas distribuciones nuevas ya no traen. Se actualiza sola.</p>
       </div>
+    </div>
+    <p class="file" style="margin-top:22px">Todas las versiones, con las sumas de verificación, están en <a href="https://github.com/bygcds/Rally-Client/releases">GitHub</a>.</p>
+
+    <div class="faq wide">
+      <details><summary>¿Qué datos envía Rally?</summary><p>Ninguno. No tiene servidores. Solo se conecta a haxball.com y a GitHub (para buscar actualizaciones y para bajar el juego que guarda en tu equipo).</p></details>
+      <details><summary>¿Dónde se guardan los replays?</summary><p>En Windows, en <code>%APPDATA%\RallyClient\Replays</code>. En Linux, normalmente en <code>~/.config/RallyClient/Replays</code>. Ajustes, pestaña Replays, tiene un botón para abrir la carpeta.</p></details>
+      <details><summary>¿Y si HaxBall se actualiza?</summary><p>Las funciones que modifican el juego se apagan solas y el juego sigue normal hasta que salga una versión nueva de Rally.</p></details>
+      <details><summary>¿Hay que actualizar siempre?</summary><p>Cada versión tiene un plazo de unos días. Después hay que actualizar para seguir jugando.</p></details>
+      <details><summary>¿La versión de Linux es igual a la de Windows?</summary><p>Sí. Es el mismo código y tiene las mismas funciones. La única diferencia que conozco es que el modo streamer detecta solo a OBS en Linux, y en Windows reconoce también a los otros programas.</p></details>
+      <details><summary>En Linux no abre o se cierra al arrancar</summary><p>Prueba primero con <code>libfuse2</code>. Si tu sistema restringe los user namespaces (Ubuntu 23.10 en adelante, por ejemplo), Rally lo detecta y arranca sin el sandbox de Chromium, así que no tienes que hacer nada. Si sigue sin abrir, abre un issue con el mensaje que salga en la terminal.</p></details>
+      <details><summary>¿Mac?</summary><p>Por ahora no. Solo Windows y Linux.</p></details>
+      <details><summary>Un problema o una idea</summary><p>Abre un <a href="https://github.com/bygcds/Rally-Client/issues">issue</a> con tu versión de Rally (Ajustes, Varios, Acerca de) y lo que estabas haciendo.</p></details>
     </div>
   </div>
 </section>

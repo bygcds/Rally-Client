@@ -4,15 +4,36 @@
   function $$(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
 
-  // Última versión publicada: enlace directo al .exe y número de versión.
+  // En Linux, el botón de Linux pasa primero.
+  if (/linux/i.test(navigator.platform || navigator.userAgent) && !/android/i.test(navigator.userAgent)) {
+    document.documentElement.setAttribute('data-os', 'linux');
+  }
+
+  function mb(n) { return (n / 1048576).toFixed(0) + ' MB'; }
+
+  // Última versión publicada: enlaces directos al .exe y al AppImage, y número de versión.
   fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (d) {
-      var exe = (d.assets || []).filter(function (a) { return /\.exe$/i.test(a.name); })[0];
+      var assets = d.assets || [];
+      var files = {
+        win: assets.filter(function (a) { return /\.exe$/i.test(a.name); })[0],
+        linux: assets.filter(function (a) { return /\.AppImage$/i.test(a.name); })[0]
+      };
       var v = String(d.tag_name || '').replace(/^v/, '');
-      if (exe) $$('[data-download]').forEach(function (a) { a.href = exe.browser_download_url; });
+      Object.keys(files).forEach(function (k) {
+        var f = files[k];
+        if (!f) return;
+        $$('[data-dl="' + k + '"]').forEach(function (a) { a.href = f.browser_download_url; });
+        $$('[data-file="' + k + '"]').forEach(function (p) { p.textContent = f.name + ', ' + mb(f.size); });
+        if (f.digest && /^sha256:/i.test(f.digest)) {
+          $$('[data-sha="' + k + '"]').forEach(function (p) {
+            p.textContent = 'SHA-256: ';
+            p.appendChild(el('code', '', f.digest.replace(/^sha256:/i, '')));
+          });
+        }
+      });
       if (v) $$('[data-version]').forEach(function (s) { s.textContent = 'Versión ' + v + '.'; });
-      if (exe) $$('[data-file]').forEach(function (p) { p.textContent = exe.name + ', ' + (exe.size / 1048576).toFixed(0) + ' MB'; });
     }).catch(function () {});
 
   // Novedades: la última abierta, las demás plegadas.

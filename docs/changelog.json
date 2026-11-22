@@ -1,6 +1,48 @@
 {
   "versions": [
     {
+      "version": "0.1.28",
+      "title": {
+        "es": "Rendimiento y ajustes internos",
+        "en": "Performance and internal tweaks",
+        "pt": "Desempenho e ajustes internos"
+      },
+      "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Tope de FPS automático (Ajustes → Rendimiento o /fps auto): usa el doble de los Hz de tu monitor para no gastar la GPU de más.",
+            "en": "Automatic FPS cap (Settings → Performance or /fps auto): uses twice your monitor's refresh rate so the GPU isn't overworked.",
+            "pt": "Limite de FPS automático (Configurações → Desempenho ou /fps auto): usa o dobro dos Hz do seu monitor para não sobrecarregar a GPU."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Entrar y salir de salas ya no recarga todo el cliente desde el disco: se reutiliza lo que ya estaba cargado y los menús responden mejor.",
+            "en": "Entering and leaving rooms no longer reloads the whole client from disk: what is already loaded is reused, so menus respond better.",
+            "pt": "Entrar e sair de salas não recarrega mais todo o cliente do disco: o que já estava carregado é reaproveitado e os menus respondem melhor."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "El medidor /fps ahora muestra la latencia de tecla (mediana y peor caso) para medir el input lag local real del cliente.",
+            "en": "The /fps meter now shows key latency (median and worst case) to measure the client's real local input lag.",
+            "pt": "O medidor /fps agora mostra a latência de tecla (mediana e pior caso) para medir o input lag local real do cliente."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Mejoras internas para que las novedades y las actualizaciones se comporten igual en cualquier instalación.",
+            "en": "Internal improvements so release notes and updates behave the same on every install.",
+            "pt": "Melhorias internas para que as novidades e as atualizações se comportem igual em qualquer instalação."
+          }
+        }
+      ]
+    },
+    {
       "version": "0.1.27",
       "title": {
         "es": "Versión para Linux y intro que se puede saltar",

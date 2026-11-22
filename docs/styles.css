@@ -63,3 +63,18 @@ footer{background:var(--dark-2);color:#b9cbbe;padding:44px 0;font-size:15px}foot
 .ph{width:100%}@media(max-width:700px){.ph{aspect-ratio:auto}}
 .cmds{column-gap:0}.cmds dt{padding-right:24px}
 .cmds dt a{text-decoration:none;border-bottom:2px solid var(--line)}.cmds dt a:hover{border-color:var(--ink)}
+/* ---- Descargas (Windows y Linux), bloques de comandos y ajustes nuevos ---- */
+.cta .btn[data-dl]{min-width:0}
+html[data-os=linux] .cta .btn[data-dl=linux]{order:-1}
+pre{margin:14px 0 0;padding:14px 16px;background:var(--dark);color:#e6e6e3;border-radius:4px;overflow-x:auto;font:600 15px/1.55 Consolas,"DejaVu Sans Mono",monospace}
+pre code{background:none;padding:0;font:inherit}
+.plats{display:grid;gap:28px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:40px}
+@media(max-width:860px){.plats{grid-template-columns:1fr}}
+.plat{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:30px 28px 26px}
+.plat h3{font-size:34px}.plat .sub{color:var(--soft);font-size:16px;margin:6px 0 20px}
+.plat .btn{margin-bottom:4px}
+.plat ol{margin:16px 0 0;padding-left:1.2em;color:var(--soft);font-size:16px}.plat li{margin-bottom:6px}
+.sha{font-size:13px;color:var(--soft);margin-top:10px;overflow-wrap:anywhere}.sha:empty{display:none}.sha code{font-size:12px;background:none;padding:0}
+.faq.wide{max-width:780px;margin-top:56px}
+.sub-h{margin-top:44px}
+.note{font-size:15px;color:var(--soft);margin-top:14px;max-width:70ch}
