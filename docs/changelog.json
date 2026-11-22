@@ -3,11 +3,43 @@
     {
       "version": "0.1.28",
       "title": {
-        "es": "Rendimiento y ajustes internos",
-        "en": "Performance and internal tweaks",
-        "pt": "Desempenho e ajustes internos"
+        "es": "Repeticiones, ajustes y rendimiento",
+        "en": "Replays, settings and performance",
+        "pt": "Replays, ajustes e desempenho"
       },
       "items": [
+        {
+          "type": "new",
+          "text": {
+            "es": "Menú de repeticiones: al pulsar «Repeticiones» se abre una lista con las grabaciones que guardó Rally (con búsqueda, mostrar en carpeta y borrar). «Buscar en otra ubicación…» abre el explorador de siempre.",
+            "en": "Replays menu: pressing “Replays” now opens a list of the recordings Rally saved (with search, show in folder and delete). “Browse another location…” opens the usual file explorer.",
+            "pt": "Menu de replays: ao tocar em “Replays” abre uma lista com as gravações que o Rally salvou (com busca, mostrar na pasta e excluir). “Procurar em outro local…” abre o explorador de sempre."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Las grabaciones apuntan los goles y puedes marcar un momento con un atajo (Ajustes → Atajos → Marcar momento): guarda los últimos 15 s de la grabación para recortarlos después.",
+            "en": "Recordings now note the goals, and you can mark a moment with a shortcut (Settings → Shortcuts → Mark moment): it saves the last 15 s of the recording to clip later.",
+            "pt": "As gravações anotam os gols e você pode marcar um momento com um atalho (Configurações → Atalhos → Marcar momento): salva os últimos 15 s da gravação para recortar depois."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "Ajustes rediseñados: pestañas agrupadas en Juego y Cliente, selector de idioma con botón, temas en lista, textos más cortos y directos, y se abre más rápido porque cada pestaña carga al entrar. El ping ahora está en Rendimiento.",
+            "en": "Redesigned settings: tabs grouped into Game and Client, a language picker with a button, themes as a list, shorter and more direct texts, and it opens faster because each tab loads when you enter it. Ping is now under Performance.",
+            "pt": "Ajustes redesenhados: abas agrupadas em Jogo e Cliente, seletor de idioma com botão, temas em lista, textos mais curtos e diretos, e abre mais rápido porque cada aba carrega ao entrar. O ping agora está em Desempenho."
+          }
+        },
+        {
+          "type": "improved",
+          "text": {
+            "es": "En instalaciones nuevas, el guardado automático y la grabación de partidas vienen apagados (Ajustes → Replays).",
+            "en": "On new installs, automatic saving and match recording start turned off (Settings → Replays).",
+            "pt": "Em instalações novas, o salvamento automático e a gravação de partidas vêm desligados (Configurações → Replays)."
+          }
+        },
         {
           "type": "new",
           "text": {
@@ -38,6 +70,30 @@
             "es": "Mejoras internas para que las novedades y las actualizaciones se comporten igual en cualquier instalación.",
             "en": "Internal improvements so release notes and updates behave the same on every install.",
             "pt": "Melhorias internas para que as novidades e as atualizações se comportem igual em qualquer instalação."
+          }
+        },
+        {
+          "type": "fix",
+          "text": {
+            "es": "Los momentos marcados ya aparecen en la barra del visor de repeticiones: antes se perdían si «Guardar sin preguntar» estaba apagado, y en salas sin partida el momento quedaba en 0:00. Una grabación con goles o momentos se guarda ahora en la carpeta de Rally.",
+            "en": "Marked moments now show up on the replay viewer's bar: they used to be lost when “Save without asking” was off, and in rooms without a running match the moment ended up at 0:00. A recording with goals or moments is now saved to Rally's folder.",
+            "pt": "Os momentos marcados agora aparecem na barra do visualizador de replays: antes se perdiam com “Salvar sem perguntar” desligado, e em salas sem partida o momento ficava em 0:00. Uma gravação com gols ou momentos agora é salva na pasta do Rally."
+          }
+        },
+        {
+          "type": "new",
+          "text": {
+            "es": "Ajustes → Replays: eliges cuántos segundos cubre un momento marcado y puedes activar «Grabar también sin rival» para que el auto-REC grabe entrenando solo.",
+            "en": "Settings → Replays: choose how many seconds a marked moment covers, and turn on “Also record without an opponent” so auto-REC records while training alone.",
+            "pt": "Ajustes → Replays: você escolhe quantos segundos um momento marcado cobre e pode ativar “Gravar também sem adversário” para o auto-REC gravar treinando sozinho."
+          }
+        },
+        {
+          "type": "fix",
+          "text": {
+            "es": "Los momentos y goles marcados caen exactos en la barra del replay (usan los fotogramas reales de la grabación) y también se ven con el tema Clásico. Los goles muestran quién los hizo, la asistencia y si fueron en propia.",
+            "en": "Marked moments and goals now land exactly on the replay bar (they use the recording's real frames) and also show with the Classic theme. Goals show who scored, the assist and whether they were own goals.",
+            "pt": "Os momentos e gols marcados caem exatos na barra do replay (usam os quadros reais da gravação) e também aparecem no tema Clássico. Os gols mostram quem fez, a assistência e se foram contra."
           }
         }
       ]

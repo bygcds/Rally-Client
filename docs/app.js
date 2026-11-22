@@ -4,14 +4,12 @@
   function $$(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
 
-  // En Linux, el botón de Linux pasa primero.
   if (/linux/i.test(navigator.platform || navigator.userAgent) && !/android/i.test(navigator.userAgent)) {
     document.documentElement.setAttribute('data-os', 'linux');
   }
 
   function mb(n) { return (n / 1048576).toFixed(0) + ' MB'; }
 
-  // Última versión publicada: enlaces directos al .exe y al AppImage, y número de versión.
   fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (d) {
@@ -36,7 +34,6 @@
       if (v) $$('[data-version]').forEach(function (s) { s.textContent = 'Versión ' + v + '.'; });
     }).catch(function () {});
 
-  // Novedades: la última abierta, 3 más a la vista y el resto detrás de un botón (así no crece sin fin).
   var RECENT = 4;
   var box = document.getElementById('timeline');
   function release(v, first) {
